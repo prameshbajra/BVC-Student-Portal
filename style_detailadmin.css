@@ -1,0 +1,335 @@
+/* Designed by Pramesh Bajracharya , Saurav Bajracharya */
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
+[class*="fontawesome-"]:before {
+    font-family: 'FontAwesome', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    color: black;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background: url(background.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    /* For WebKit*/
+    -moz-background-size: cover;
+    /* Mozilla*/
+    -o-background-size: cover;
+    /* Opera*/
+    font: 400 0.875rem/1.5 "Open Sans", sans-serif;
+    min-height: 100%;
+    background-size: cover;
+    font-weight: bold;
+}
+
+#home {
+    float: right;
+    margin-top: -65px;
+}
+
+#font-self {
+    margin-bottom: 90px;
+    margin-left: 30px;
+}
+
+#left_art {
+    margin-left: 30px;
+    margin-top: -98px;
+    float: right;
+    font-weight: 700;
+}
+
+a {
+    color: #eee;
+    outline: 0;
+    text-decoration: none;
+}
+
+a:focus,
+a:hover {
+    text-decoration: underline;
+}
+
+input {
+    border: 0;
+    color: #606468;
+    font: inherit;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    -webkit-transition: background-color .3s;
+    transition: background-color .3s;
+}
+
+#topHead {
+    padding: 7px;
+    position: fixed;
+    width: 100%;
+    background-color: #ea4c88;
+}
+
+#topHead> h2 {
+    margin-left: 20px;
+}
+
+#bodyMain {
+    padding: 30px;
+}
+
+#form_submit {
+    float: right;
+    width: 150px;
+    margin-top: -52px;
+    margin-left: 20px;
+    border-radius: 50px;
+    -webkit-transition: -webkit-transform 0.5s;
+}
+
+#form_submit:hover {
+    width: 149px;
+    border-radius: 60px;
+    background-color: #ea4c68;
+    color: #fff;
+}
+
+.form__fieldRoll {
+    margin-left: 30px;
+    margin-top: 110px;
+}
+
+.form__fieldRoll b {
+    text-transform: bold;
+}
+
+.form__field {
+    margin-left: 30px;
+    margin-top: 25px;
+}
+
+.form--login {
+    color: #606468;
+}
+
+.form--login label,
+.form--login input[type="text"],
+.form--login input[type="password"],
+.form--login input[type="submit"] {
+    border-radius: 0.25rem;
+    padding: 1rem;
+}
+
+.form--login label {
+    background-color: #363b41;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    width: 40%;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+}
+
+.form--login input[type="text"],
+.form--login input[type="password"] {
+    background-color: #FFFFFF;
+    color: #606468;
+    margin-left: 30px;
+    width: 350px;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+}
+
+.form--login input[type="text"]:focus,
+.form--login input[type="text"]:hover,
+.form--login input[type="password"]:focus,
+.form--login input[type="password"]:hover {
+    background-color: dimgrey;
+    color: #fff;
+}
+
+.form--login input[type="submit"] {
+    background-color: #ea4c88;
+    color: #eee;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.form--login input[type="submit"]:focus,
+.form--login input[type="submit"]:hover {
+    background-color: #d44179;
+}
+
+input {
+    border: 0;
+    color: inherit;
+    font: inherit;
+    width: 40%;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    -webkit-transition: background-color .3s;
+    transition: background-color .3s;
+}
+
+label {
+    -ms-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+.new {
+    float: left;
+    width: 250px;
+    background-color: #363b41;
+    padding: 15px 0 0 0;
+    height: 50px;
+}
+
+table {
+    margin: 10px 0 0 0;
+}
+
+th {
+    background-color: burlywood;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    width: 40%;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    height: 50px;
+    text-align: left;
+    text-transform: none;
+}
+
+td {
+    background-color: burlywood;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    width: 40%;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    height: 50px;
+}
+
+.viewupdate {
+    margin: 45px 0 0 30px;
+    width: 500px;
+}
+
+.studentlist {
+    margin-top: -65px;
+    width: 700px;
+}
+
+#search {
+    margin-top: 55px;
+    margin-left: 30px;
+}
+
+.dibba {
+    margin-left: 30px;
+    margin-top: 45px;
+}
+
+.searchbottom {
+    margin-top: 45px;
+    margin-left: 30px;
+    width: 500px;
+}
+
+.loginName {
+    color: black;
+    width: 200px;
+    background-color: burlywood;
+}
+
+#submitForm {
+    width: 170px;
+    height: 50px;
+    border-radius: 30px;
+    margin: 2080px 0 0 570px;
+    color: white;
+    background: burlywood;
+}
+
+.tg {
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin-left: 150px;
+    margin-top: 40px;
+    border-color: #ccc;
+    border-radius: 30px;
+    width: 1000px;
+    text-align: center;
+}
+
+.tg td {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    padding: 10px 5px;
+    border-style: solid;
+    border-width: 0px;
+    overflow: hidden;
+    word-break: normal;
+    border-color: #ccc;
+    color: #333;
+    background-color: #fff;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    width: 500px;
+}
+
+.tg th {
+    width: 500px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    padding: 10px 5px;
+    border-style: solid;
+    border-width: 0px;
+    overflow: hidden;
+    word-break: normal;
+    border-color: #ccc;
+    color: #333;
+    background-color: #f0f0f0;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+}
+
+.tg .tg1 {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fff;
+    color: #606468;
+    text-align: center;
+    width: 500px;
+    vertical-align: top;
+}
+
+.tg .tg2 {
+    vertical-align: top;
+    width: 500px;
+}
+
+.tg .tg3 {
+    background-color: #fff;
+    vertical-align: top;
+    width: 500px;
+}
+
+.loginNameWhite {
+    background-color: #fff;
+    color: #606468;
+}
+
+.image_upload {
+    margin: -2275px 45% 0 55%;
+}
+
+.send{
+	margin-top: 100px;
+}

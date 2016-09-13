@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="main.css">
+    <script type="text/javascript" src="date_time.js"></script>
+</head>
+
+<body>
+    <div class="topDiv">
+        <div class="imageLeft">
+            <img src="round.png" />
+        </div>
+        <div id="asideCont">
+            <h2>BVC Engineering College, Odalarevu</h2>
+            <h3>Affiliated To  JNTUK, Kakinada</h3> Accredited By NBA New Delhi and NAAC With 'A' Grade<br> Approved By AICTE, New Delhi<br> Established in 1997<br><br>
+        </div>
+        <div class="imageRight">
+            <span id="date_time"></span>
+            <script type="text/javascript">
+                window.onload = date_time('date_time');
+
+            </script>
+            <img src="group.png" />
+        </div>
+    </div>
+    <div class="clear"></div>
+<center>
+                <ul class="menu">
+                    <li><a class="active" href="index.php">Home</a></li>
+                    <li><a href="contact.php">Contact</a></li>
+                    <li><a href="About.php">About Us</a></li>
+                    <li><a href="vision.php">Vision &amp; Mission</a></li>
+                    <li><a href="st_table.php">Management</a>
+
+                        <ul class="submenu">
+                            <li><a href="founderchairman.php">Founder-Chairman</a></li>
+                            <li><a href="secretary.php">Secretary</a></li>
+                            <li><a href="chairman.php">Chairman</a></li>
+                            <li><a href="vicechairman.php">Vice-Chairman</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="principal.php">Principal</a></li>
+                    <li><a href="st_table.php">Faculty</a>
+                        <ul class="submenu1">
+                            <li><a href="st_table.php">CSE</a></li>
+                            <li><a href="cest.php">CE</a></li>
+                            <li><a href="mest.php">ME</a></li>
+                            <li><a href="eeest.php">EEE</a></li>
+                            <li><a href="ecest.php">ECE</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="index.php">Students</a></li>
+                    <li><a href="st_table.php"> Departments</a>
+                        <ul class="submenu1">
+                            <li><a href="Department.php">CSE</a></li>
+                            <li><a href="civil.php">CE</a></li>
+                            <li><a href="mech.php">ME</a></li>
+                            <li><a href="eee.php">EEE</a></li>
+                            <li><a href="ece.php">ECE</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="st_table.php">Accredition</a>
+                        <ul class="submenu1">
+                            <li><a href="naac.php">NAAC</a></li>
+                            <li><a href="nba.php">NBA</a></li>
+                            <li><a href="pio.php">PIO</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="help.php">Help</a></li>
+
+                </ul>
+            </center>
+    <div class="bodyDiv">
+       <div class="forAside">
+                    <aside id="buttonsAside">
+                        <nav id="navigationBar">
+                            <ul class="sideBar">
+                                <li><a href="acadamic.php">Academics</a></li>
+                                <li><a href="administration.php">Administration</a></li>
+                                <li><a href="bvcnews.php">BVC News</a></li>
+                                <li><a href="forthcoming.php">Forthcoming Event</a></li>
+                                <li><a href="#">E-mail to students</a></li>
+                                <li><a href="#">SMS to Parents/Students</a></li>
+                                <li><a href="proffesional.php">Professional Body</a></li>
+                                <li><a href="project.php">Projects</a></li>
+                                <li><a href="deplib.php">Department Library</a></li>
+                                <li><a href="training.php">Training</a></li>
+                                <li><a href="games.php">Games And Sports</a></li>
+                                <li><a href="recuriment.php">Recruitment</a></li>
+                                <li><a href="placements.php">Placement</a></li>
+                                <li><a href="#">Feedback to College</a></li>
+                                <li><a href="alumini.php">Alumini</a></li>
+                                <li><a href="notice.php">Notices &amp; Circulars</a></li>
+                            </ul>
+                        </nav>
+                    </aside>
+                </div>
+        <div class="container">
+
+            
+			
+    <div id="bodyMain">
+<center>
+        <?php
+			include "fun.php";
+			upfnew();
+
+        ?>
+		
+</center>
+    </div>
+	</br></br>
+	
+	</article>
+	</br></br>
+	</br>
+            <aside class="map" style="float:right; margin-left:10%;">
+                <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
+                <div style='overflow:hidden;height:440px;width:662px;margin-left:30%;'>
+                    <div id='gmap_canvas' style='height:240px;width:462px;border:2px solid gray;'></div>
+
+                    <style>
+                        #gmap_canvas img {
+                            max-width: none!important;
+                            background: none!important
+                        }
+
+                    </style>
+                </div>
+                <script type='text/javascript'>
+                    function init_map() {
+                        var myOptions = {
+                            zoom: 10,
+                            center: new google.maps.LatLng(16.46982694408489, 81.93206051503896),
+                            mapTypeId: google.maps.MapTypeId.ROADMAP
+                        };
+                        map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);
+                        marker = new google.maps.Marker({
+                            map: map,
+                            position: new google.maps.LatLng(16.46982694408489, 81.93206051503896)
+                        });
+                        infowindow = new google.maps.InfoWindow({
+                            content: '<strong>BVC</strong><br>Odalarevu<br>'
+                        });
+                        google.maps.event.addListener(marker, 'click', function() {
+                            infowindow.open(map, marker);
+                        });
+                        infowindow.open(map, marker);
+                    }
+                    google.maps.event.addDomListener(window, 'load', init_map);
+
+                </script>
+            </aside>
+
+
+        </div>
+    </div>
+
+
+
+	</body>
+<footer id="footer">
+    <h4 id="left">Copyright &copy;</h4>
+    <h4 id="right">BVCEC</h4>
+</footer>
+
+
+</html>
