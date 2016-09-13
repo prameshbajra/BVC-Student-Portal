@@ -53,7 +53,7 @@
                 <li><a href="#">ECE</a></li>
             </ul>
         </li>
-        <li><a href="index.php">Students</a></li>
+
         <li><a href="#"> Departments</a>
             <ul class="submenu1">
                <li><a href="Department.php">CSE</a></li>
@@ -71,7 +71,7 @@
                 <li><a href="pio.php">PIO</a></li>
             </ul>
         </li>
-        <li><a href="#">Help</a></li>
+        <li><a href="help.php">Help</a></li>
 
     </ul>
     <div class="bodyDiv">
@@ -81,21 +81,21 @@
                     <nav id="navigationBar">
                         <ul class="sideBar">
                             <li><a href="acadamic.php">Academics</a></li>
-                            <li><a href="#">Administration</a></li>
-                            <li><a href="#">BVC News</a></li>
-                            <li><a href="#">Forthcoming Event</a></li>
+                            <li><a href="administration.php">Administration</a></li>
+                            <li><a href="bvcnews.php">BVC News</a></li>
+                            <li><a href="forthcoming.php">Forthcoming Event</a></li>
                                 <li><a href="emailnew.php">E-mail to students</a></li>
-                            <li><a href="#">SMS to Parents/Students</a></li>
-                            <li><a href="#">Recruitment</a></li>
-                            <li><a href="#">Professional Body</a></li>
-                            <li><a href="#">Projects</a></li>
-                            <li><a href="#">Department Library</a></li>
-                            <li><a href="#">Training</a></li>
-                            <li><a href="#">Games And Sports</a></li>
-                            <li><a href="#">Placement</a></li>
+                            <li><a href="sms.php">SMS to Parents/Students</a></li>
+                            <li><a href="recuriment.php">Recruitment</a></li>
+                            <li><a href="proffesional.php">Professional Body</a></li>
+                            <li><a href="project.php">Projects</a></li>
+                            <li><a href="deplib.php">Department Library</a></li>
+                            <li><a href="training.php">Training</a></li>
+                            <li><a href="games.php">Games And Sports</a></li>
+                            <li><a href="placements.php">Placement</a></li>
                                 <li><a href="feedback.php">Feedback to College</a></li>
                             <li><a href="alumini.php">Alumini</a></li>
-                            <li><a href="#">Notices &amp; Circulars</a></li>
+                            <li><a href="notice.php">Notices &amp; Circulars</a></li>
                         </ul>
                     </nav>
                 </form>

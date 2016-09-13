@@ -96,7 +96,7 @@
                 <?php
 
                             // Retrieve Email from Database
-                            $getemail = mysql_query("SELECT * FROM profiles");
+                            $getemail = mysql_query("SELECT * FROM profiles ORDER BY roll_no");
 
                             if (!$getemail) die('MySQL Error: ' . mysql_error());
 

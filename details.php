@@ -61,7 +61,7 @@
                 <li><a href="#">ECE</a></li>
             </ul>
         </li>
-        <li><a href="index.php">Students</a></li>
+
         <li><a href="#"> Departments</a>
             <ul class="submenu1">
                 <li><a href="Department.php">CSE</a></li>
@@ -79,7 +79,7 @@
                 <li><a href="pio.php">PIO</a></li>
             </ul>
         </li>
-        <li><a href="#">Help</a></li>
+        <li><a href="help.php">Help</a></li>
 
     </ul>
     <div class="bodyDiv">
@@ -101,9 +101,9 @@
                             <li><a href="#">4-1 Semester</a></li>
                             <li><a href="#">4-2 Semester</a></li>
                             
-                        <li><a href="#">Forthcoming Event</a></li>
+                        <li><a href="forthcoming.php">Forthcoming Event</a></li>
                                 
-                            <li><a href="#">Notices &amp; Circulars</a></li>
+                            <li><a href="notice.php">Notices &amp; Circulars</a></li>
                         </ul>
                     </nav>
                 </form>

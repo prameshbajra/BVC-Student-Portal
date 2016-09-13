@@ -298,14 +298,16 @@ function details()
     mysqli_select_db($con,"info");
     $flag=0;
 	$temp=0;
-    $uname=$_POST['uname'];
-    $pwd=$_POST['pwd'];
+    $uname=strtoupper($_POST['uname']);
+    $pwd=strtoupper($_POST['pwd']);
     $result = mysqli_query($con,"SELECT * FROM profiles");
      date_default_timezone_set('Asia/Calcutta');
-     $today=date('Y-m-d');
+     $today=date('m-d');
+    
     while($row = mysqli_fetch_array($result))
     {
-
+        $dayBirth = $row['dob'];
+        $mmdd = substr($dayBirth,5);
         if($row['uname']==$uname && $row['pwd']==$pwd && $row['name']=="admin")
 		{
             echo "<br><br><h2 align = 'center'>";
@@ -338,6 +340,7 @@ function details()
 					$row['aggregate']=($row['one_1']+$row['one_2']+$row['two_1']+$row['two_2']+$row['three_1']+$row['three_2']+$row['four_1'])/7;
 			else
 					$row['aggregate']=($row['one_1']+$row['one_2']+$row['two_1']+$row['two_2']+$row['three_1']+$row['three_2']+$row['four_1']+$row['four_2'])/8;
+            
 			$agg=$row['aggregate'];
 			$sql = "UPDATE profiles SET aggregate='$agg' WHERE uname='$uname'";
 			$ress = mysqli_query($con,$sql) or die(mysqli_error($con));
@@ -346,14 +349,16 @@ function details()
 
 			//echo "<img src='uploads/".$row['roll_no']."' style = 'width : 200px; margin : 75px 0 -300px 950px;'>";
             echo "<div align=CENTER>";
-            echo "<tr><th><h1 style = 'color: dimgray;font-size:16px;'> WELCOME : </td><td>" . $row['name'] . "</h1></td></tr><br><br>";
-            if ($row['dob'] == $today)
+            echo "<tr><th><br><br><h1 style = 'color: dimgray;font-size:16px;'> WELCOME : </td><td>" . $row['name'] . "</h1></td></tr><br><br>";
+            if ($mmdd == $today)
             {
-                echo "<p style ='margin-top:-100px;position:absolute;margin-left:70%;'>Many Many Happy Returns of The Day Mr ". $row['name']."</p>";               
+                echo "<h3 style ='margin-top:-160px;position:absolute;margin-left:40%;'>Many Many Happy Returns of The Day Mr ". $row['name']."</h3>";               
             }
 			echo"</div>";
 			echo "<div align=center>";
-            echo "<img src='uploads/".$row['roll_no'].".jpg' style = 'width:100px ;height :120px ;margin-left:340px;margin-top:-35px;position:absolute;'>";
+            $conv = $row['roll_no'];
+            $roll=strtoupper($conv);
+            echo "<img src='uploads/".$roll.".jpg' style = 'width:100px ;height :120px ;margin-left:340px;margin-top:-35px;position:absolute;'>";
 			echo "<table border='0' cellspacing='1px'><br>";
             echo "<tr><th> Roll no</td><td>" . $row['roll_no'] . "</td></tr>";
 			$temp=$row['roll_no'];
@@ -376,10 +381,10 @@ function details()
             echo "<tr><td>I-II</td><td>".$row['one_2']."</td></tr>";
             echo "<tr><td>II-I</td><td>".$row['two_1']."</td></tr>";
             echo "<tr><td>II-II</td><td>".$row['two_2']."</td></tr>";
-            echo "<tr><td>I-I</td><td>".$row['three_1']."</td></tr>";
-            echo "<tr><td>I-II</td><td>".$row['three_2']."</td></tr>";
-            echo "<tr><td>II-I</td><td>".$row['four_1']."</td></tr>";
-            echo "<tr><td>II-II</td><td>".$row['four_2']."</td></tr>";
+            echo "<tr><td>III-I</td><td>".$row['three_1']."</td></tr>";
+            echo "<tr><td>III-II</td><td>".$row['three_2']."</td></tr>";
+            echo "<tr><td>IV-I</td><td>".$row['four_1']."</td></tr>";
+            echo "<tr><td>IV-II</td><td>".$row['four_2']."</td></tr>";
             echo "<tr><th>Cummulative percentage</td><td>".$row['aggregate']."</td></tr>";
             echo "<tr><th>Attendance %</td><td>".$row['attendance']."</td></tr>";
             echo "<tr><th>Member of </td><td>".$row['members']."</td></tr>";
@@ -430,7 +435,7 @@ function import()                                         // Function made for e
         while(($filesop = fgetcsv($handle, 1000, ",")) !== false)
         {
 			$x++;
-			if( $x==1)
+			if( $x==1 or $x==2)
 				continue;
             $roll_no= $filesop[0];
             $name= $filesop[1];
@@ -442,8 +447,8 @@ function import()                                         // Function made for e
             $mobile=$filesop[7];
             $aadhaar_id = $filesop[8];
             $father_mobile=$filesop[9];
-            $uname=$filesop[10];
-            $pwd=$filesop[11];
+            $uname=$filesop[0];
+            $pwd=$filesop[0];
             $nationality =$filesop[12];
             $caste = $filesop[13];
             $th10 =$filesop[14];
@@ -479,6 +484,8 @@ function import()                                         // Function made for e
             $others2 =$filesop[44];
             $others3 = $filesop[45];
             $others4 = $filesop[46];
+            $aggregate = $filesop[47];
+            $hobbies = $filesop[48];
 
 
             $sql_insert="INSERT INTO profiles
@@ -507,8 +514,10 @@ function import()                                         // Function made for e
             two_2,
             three_2,
             four_2,
+            aggregate,
             attendance,
             members,
+            hobbies,
             academics1,
             curricular1,
             co_curricular1,
@@ -556,8 +565,10 @@ function import()                                         // Function made for e
             '$two_2',
             '$three_2',
             '$four_2',
+            '$aggregate',
             '$attendance',
             '$members',
+            '$hobbies',
             '$academics1',
             '$curricular1',
             '$co_curricular1',
@@ -599,7 +610,7 @@ function stu_table()
         $con =mysqli_connect("localhost","root","");
         mysqli_select_db($con,"info");
         $flag=0;
-        $result = mysqli_query($con,"SELECT * FROM profiles");
+        $result = mysqli_query($con,"SELECT * FROM profiles ORDER BY roll_no");
         echo "<table id = 'cust'>
 		<tr>
 			<th> Roll no</th>
@@ -743,7 +754,7 @@ function details_admin()
         }
 
     }
-    mysqli_select_db($con,"image");
+   /* mysqli_select_db($con,"image");
     $result = mysqli_query($con,"SELECT * FROM image");
     while($row = mysqli_fetch_array($result))
     {
@@ -752,7 +763,7 @@ function details_admin()
 		{
 			echo "<div class = 'image_upload'><img src='".$row['image']."' style = 'margin : 0 0 0 200px;'></div>";
 		}
-	}
+	}*/
     if($flag==0)
     {
         echo "<p style = 'margin : 150px 0 0 50px;'><center>The roll number is not registered in the database</p></center>";

@@ -51,7 +51,7 @@
                             <li><a href="ecest.php">ECE</a></li>
                         </ul>
                     </li>
-                    <li><a href="index.php">Students</a></li>
+            
                     <li><a href="st_table.php"> Departments</a>
                         <ul class="submenu1">
                             <li><a href="Department.php">CSE</a></li>
@@ -81,8 +81,8 @@
                                 <li><a href="administration.php">Administration</a></li>
                                 <li><a href="bvcnews.php">BVC News</a></li>
                                 <li><a href="forthcoming.php">Forthcoming Event</a></li>
-                                <li><a href="#">E-mail to students</a></li>
-                                <li><a href="#">SMS to Parents/Students</a></li>
+                                <li><a href="emailnew.php">E-mail to students</a></li>
+                                <li><a href="sms.php">SMS to Parents/Students</a></li>
                                 <li><a href="proffesional.php">Professional Body</a></li>
                                 <li><a href="project.php">Projects</a></li>
                                 <li><a href="deplib.php">Department Library</a></li>
@@ -90,7 +90,7 @@
                                 <li><a href="games.php">Games And Sports</a></li>
                                 <li><a href="recuriment.php">Recruitment</a></li>
                                 <li><a href="placements.php">Placement</a></li>
-                                <li><a href="#">Feedback to College</a></li>
+                                <li><a href="feedback.php">Feedback to College</a></li>
                                 <li><a href="alumini.php">Alumini</a></li>
                                 <li><a href="notice.php">Notices &amp; Circulars</a></li>
                             </ul>
