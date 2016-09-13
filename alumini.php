@@ -59,7 +59,7 @@
                         </ul>
                     </li>
                     <li><a href="#">Principal</a></li>
-                    <li><a href="faculty.php">Faculty</a></li>
+                    <li><a href="#">Faculty</a></li>
                     <li><a href="#">Students</a></li>
                     <li><a href="Department.php"> Departments</a>
                         <ul class="submenu">

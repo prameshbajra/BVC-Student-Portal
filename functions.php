@@ -1,34 +1,40 @@
-
-
-
-
 <html>
+
 <head>
 
-<style>
-#cust {
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-    border-collapse: collapse;
-    width: 98%;
-}
+    <style>
+        #cust {
+            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 98%;
+        }
+        
+        #cust td,
+        #cust th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        
+        #cust tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        
+        #cust tr:hover {
+            background-color: #ddd;
+        }
+        
+        #cust th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: burlywood;
+            color: white;
+        }
 
-#cust td, #cust th {
-    border: 1px solid #ddd;
-    padding: 8px;
-}
+    </style>
+</head>
 
-#cust tr:nth-child(even){background-color: #f2f2f2;}
-
-#cust tr:hover {background-color: #ddd;}
-
-#cust th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: left;
-    background-color: burlywood;
-    color: white;
-}
-</style></head></html>
+</html>
 
 
 
@@ -365,7 +371,7 @@ function details()
             echo "<tr><th> 10th</td><td>" . $row['th10'] . "</td></tr>";
             echo "<tr><th> +2Sc</td><td>" . $row['sc2'] . "</td></tr>";
             echo "<tr><th> Diploma</td><td>" . $row['diploma'] . "</td></tr>";
-            echo "<tr><td colspan='2'><p id='achievements'><u>B.Tech Marks (in %)</u></p></td></tr>";
+            echo "<tr style='background-color:white'><td colspan='2'><p id='achievements'><u>B.Tech Marks (in %)</u></p></td></tr>";
             echo "<tr><td>I-I</td><td>".$row['one_1']."</td></tr>";
             echo "<tr><td>I-II</td><td>".$row['one_2']."</td></tr>";
             echo "<tr><td>II-I</td><td>".$row['two_1']."</td></tr>";
@@ -389,7 +395,7 @@ function details()
 
 
             echo "</table>";
-echo"</div>";
+            echo"</div>";
 
             //Table academics ends ...
             $flag=1;

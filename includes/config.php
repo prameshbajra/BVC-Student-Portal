@@ -5,7 +5,7 @@ ob_start();
 // db properties
 define('DBHOST','localhost');
 define('DBUSER','root');
-define('DBPASS','bvcecskrv');
+define('DBPASS','');
 define('DBNAME','info');
 
 // make a connection to mysql here

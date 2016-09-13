@@ -369,3 +369,10 @@ nav ul li {
     float: right;
     margin-right: 4%;
 }
+#submitButton{
+    width:80px;
+    height: 40px;
+    border-radius:20px;
+    color: black;
+    background-color:burlywood;
+}

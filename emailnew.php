@@ -47,14 +47,14 @@
     </script>
 
 </head>
- 
-                              
-                
-        <div class="clear"></div>
 
-        
-                    <div class="centralDiv" style="margin-left:5%;">
-                        <?php 
+
+
+<div class="clear"></div>
+
+
+<div class="centralDiv" style="margin-left:5%;">
+    <?php 
                         
                         include('includes/config.php');
 
@@ -86,14 +86,14 @@
                         }
 
                         ?>
-                        <div class="container-fluid" style="width:130%;">
-                            <center>
-                                <p>
-                                    <h2>Please Select Students</h2>
-                                </p><br><br>
+    <div class="container-fluid" style="width:130%;margin-left:25%;">
+        <center>
+            <p>
+                <h2>Please Select Students</h2>
+            </p><br><br>
 
-                                <form method="post" action="">
-                                    <?php
+            <form method="post" action="">
+                <?php
 
                             // Retrieve Email from Database
                             $getemail = mysql_query("SELECT * FROM profiles");
@@ -122,22 +122,24 @@
                             }
                             echo "</table>";
                             ?>
-                                        <br><br>
-                                        <p>Email Subject: <input type="text" name="subject" value="" class="form-control" /></p>
-                                        <br><br>
-                                        <p>Email Content: <textarea name="message" cols="40" rows="6"></textarea></p>
-                                        <center><input type='submit' name='submit' value='Send Email Now' class="btn btn-primary btn-block" />
-                                        </center>
-                                        <br></form>
-                        </div>
-                    </div>
-                </div>
-                </center>
-        </div>
-        <footer id="footer">
-            <h4 id="left">Copyright &copy; - <?php echo "20".date('y');?></h4>
-            <h4 id="right">BVCEC</h4>
-        </footer>
-    </body>
+                    <br><br>
+                    <p>Email Subject: <input type="text" name="subject" value="" class="form-control" /></p>
+                    <br><br>
+                    <p>Email Content: <textarea name="message" cols="40" rows="6"></textarea></p>
+                    <center><input type='submit' name='submit' value='Send Email Now' class="btn btn-primary btn-block" />
+                    </center>
+                    <br></form>
+    </div>
+</div>
+</div>
+</center>
+</div>
+<footer id="footer">
+    <h4 id="left">Copyright &copy; -
+        <?php echo "20".date('y');?>
+    </h4>
+    <h4 id="right">BVCEC</h4>
+</footer>
+</body>
 
 </html>
