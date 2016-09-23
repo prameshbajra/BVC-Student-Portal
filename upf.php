@@ -1,22 +1,23 @@
 <style>
-body{ 
-    background: url(background.png) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    /* For WebKit*/
-    -moz-background-size: cover;
-    /* Mozilla*/
-    -o-background-size: cover;
-    /* Opera*/
-    font: 400 0.875rem/1.5 "Open Sans", sans-serif;
-    min-height: 100%;
-    background-size: cover;
-    font-weight: bold;
-    font: 400 0.875rem/1.5 "Open Sans", sans-serif;
-    margin: 0;
-    min-height: 100%;
-    font-weight: bold;
-}
-	</style>
+    body {
+        background: url(background.png) no-repeat center center fixed;
+        -webkit-background-size: cover;
+        /* For WebKit*/
+        -moz-background-size: cover;
+        /* Mozilla*/
+        -o-background-size: cover;
+        /* Opera*/
+        font: 400 0.875rem/1.5 "Open Sans", sans-serif;
+        min-height: 100%;
+        background-size: cover;
+        font-weight: bold;
+        font: 400 0.875rem/1.5 "Open Sans", sans-serif;
+        margin: 0;
+        min-height: 100%;
+        font-weight: bold;
+    }
+
+</style>
 
 
 
@@ -72,72 +73,83 @@ $sql=mysql_query("SELECT * FROM upfn");
 
 
 ?>
-<html>
-<head>
+    <html>
 
-<style>
-#cust {
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-    border-collapse: collapse;
-    width: 60%;
-}
+    <head>
 
-#cust td, #cust th {
-    border: 1px solid #ddd;
-    padding: 8px;
-}
+        <style>
+            #cust {
+                font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+                border-collapse: collapse;
+                width: 60%;
+            }
+            
+            #cust td,
+            #cust th {
+                border: 1px solid #ddd;
+                padding: 8px;
+            }
+            
+            #cust tr:nth-child(even) {
+                background-color: #f2f2f2;
+            }
+            
+            #cust tr:hover {
+                background-color: #ddd;
+            }
+            
+            #cust th {
+                padding-top: 12px;
+                padding-bottom: 12px;
+                text-align: left;
+                background-color: burlywood;
+                color: white;
+            }
 
-#cust tr:nth-child(even){background-color: #f2f2f2;}
-
-#cust tr:hover {background-color: #ddd;}
-
-#cust th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: left;
-    background-color: burlywood;
-    color: white;
-}
-</style>
-
-
-
-<style>
-.button {
-  display: inline-block;
-  padding: 7px 15px;
-  font-size: 35px;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  outline: none;
-  color: #fff;
-  background-color: burlywood;
-  border: none;
-  border-radius: 15px;
-  box-shadow: 0 9px #999;
-}
-
-.button:hover {background-color: firebrick}
-
-.button:active {
-  background-color: blue;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
-}
-</style>
+        </style>
 
 
 
-</head>
-<body>
+        <style>
+            .button {
+                display: inline-block;
+                padding: 7px 15px;
+                font-size: 35px;
+                cursor: pointer;
+                text-align: center;
+                text-decoration: none;
+                outline: none;
+                color: #fff;
+                background-color: burlywood;
+                border: none;
+                border-radius: 15px;
+                box-shadow: 0 9px #999;
+            }
+            
+            .button:hover {
+                background-color: firebrick
+            }
+            
+            .button:active {
+                background-color: blue;
+                box-shadow: 0 5px #666;
+                transform: translateY(4px);
+            }
+
+        </style>
+
+
+
+    </head>
+
+    <body>
 
 
 
 
 
 
-<?php
+        <?php
 
 if($epr=='update'){
 
@@ -145,81 +157,84 @@ $ide=$_GET['ide'];
 $row=mysql_query("SELECT * FROM upfn WHERE no='$ide'");
 $st_row=mysql_fetch_array($row);
 	?>
-	
-<h2 align="center" style="color: blue">UPDATE FLASH NEWS</h2>
-<form method="POST" action='upf.php?epr=saveup'>
-<table align="center">
 
-<tr>
-<td>ID:</td>
-<td><input type='text' name='ro' value="<?PHP echo $st_row['no'] ?>"/></td>
-</tr>
+            <h2 align="center" style="color: blue">UPDATE FLASH NEWS</h2>
+            <form method="POST" action='upf.php?epr=saveup'>
+                <table align="center">
 
-
-<tr>
-<td>1 line:</td>
-<td><input type='text' name='texto' value="<?PHP echo $st_row['texto'] ?>"/></td>
-</tr>
+                    <tr>
+                        <td>ID:</td>
+                        <td><input type='text' name='ro' value="<?PHP echo $st_row['no'] ?>" /></td>
+                    </tr>
 
 
+                    <tr>
+                        <td>1 line:</td>
+                        <td><input type='text' name='texto' value="<?PHP echo $st_row['texto'] ?>" /></td>
+                    </tr>
 
-<tr>
-<td>2 line:</td>
-<td><input type='text' name='textt' value="<?PHP echo $st_row['textt'] ?>"/></td>
-</tr><tr>
-<tr>
-<td>3 line:</td>
-<td><input type='text' name='textth' value="<?PHP echo $st_row['textth'] ?>"/></td>
-</tr>
 
-<tr>
-<td>4 line:</td>
-<td><input type='text' name='textf' value="<?PHP echo $st_row['textf'] ?>"/></td>
-</tr>
-<tr>
-<td>5 line:</td>
-<td><input type='text' name='textfi' value="<?PHP echo $st_row['textfi'] ?>"/></td>
-</tr>
-</table></div>
-</br>
-<tr>
-<td></td>
-<div align="center"><button class="button"><td><name='sb'></td>submit</button></div></br>
-</br>
-</br>
-</br>
-</br>
-</br>
 
-</tr>
-</form>
-	
-<?php  }else{
+                    <tr>
+                        <td>2 line:</td>
+                        <td><input type='text' name='textt' value="<?PHP echo $st_row['textt'] ?>" /></td>
+                    </tr>
+                    <tr>
+                        <tr>
+                            <td>3 line:</td>
+                            <td><input type='text' name='textth' value="<?PHP echo $st_row['textth'] ?>" /></td>
+                        </tr>
+
+                        <tr>
+                            <td>4 line:</td>
+                            <td><input type='text' name='textf' value="<?PHP echo $st_row['textf'] ?>" /></td>
+                        </tr>
+                        <tr>
+                            <td>5 line:</td>
+                            <td><input type='text' name='textfi' value="<?PHP echo $st_row['textfi'] ?>" /></td>
+                        </tr>
+                </table>
+                </div>
+                </br>
+                <tr>
+                    <td></td>
+                    <div align="center"><button class="button"><td><name='sb'></td>submit</button></div>
+                    </br>
+                    </br>
+                    </br>
+                    </br>
+                    </br>
+                    </br>
+
+                </tr>
+            </form>
+
+            <?php  }else{
 ?>
 
 
 
-<?php } ?>
+            <?php } ?>
 
 
 
 
 
-<h2 align="center" style="color: blue">WELCOME TO UPDATE FLASH NEWS PAGE</h2>
-<table id="cust" align="center" border="1" cellspacing="0" cellpadding="
+            <h2 align="center" style="color: blue">WELCOME TO UPDATE FLASH NEWS PAGE</h2>
+            <table id="cust" align="center" border="1" cellspacing="0" cellpadding="
 0" width="700">
-<thead>
-<th>1 line</th>
-<th>2 line</th>
-<th>3 line</th>
-<th>4 line</th>
-<th>5 line</th>
+                <thead>
+                    <th>1 line</th>
+                    <th>2 line</th>
+                    <th>3 line</th>
+                    <th>4 line</th>
+                    <th>5 line</th>
 
 
 
-<th>Action</th>
-</thead>
-<?php
+                    <th>Action</th>
+                </thead>
+                <?php
 $i=1;
 while($row=mysql_fetch_array($sql)){
 	echo"<tr>
@@ -246,16 +261,18 @@ while($row=mysql_fetch_array($sql)){
 
 
 
-</table> <?php echo $msg; ?>
+            </table>
+            <?php echo $msg; ?>
 
-</br>
-</br>
-<form method="POST" action='admin.php'><center><button class="button"><name='stu'>Exit From Udate Flash News Page</button></form></br>
+            </br>
+            </br>
+            <form method="POST" action='admin.php'>
+                <center><button class="button"><name='stu'>Exit From Udate Flash News Page</button></form>
+            </br>
 
-</br>
-
-
-</body>
-</html>
+            </br>
 
 
+    </body>
+
+    </html>

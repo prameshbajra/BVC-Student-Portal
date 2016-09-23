@@ -4,6 +4,7 @@
 <head>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="main.css">
+    <link rel="shortcut icon" href="round.png" type="image/x-icon" />
     <script type="text/javascript" src="date_time.js"></script>
 	
 	
@@ -46,14 +47,14 @@
         <li><a href="principal.php">Principal</a></li>
         <li><a href="#">Faculty</a>
             <ul class="submenu1">
-                <li><a href="#">CSE</a></li>
+                <li><a href="st_table.php">CSE</a></li>
                 <li><a href="#">CE</a></li>
                 <li><a href="#">ME</a></li>
                 <li><a href="#">EEE</a></li>
                 <li><a href="#">ECE</a></li>
             </ul>
         </li>
-
+        <li><a href="stlo.php">Students</a></li>
         <li><a href="#"> Departments</a>
             <ul class="submenu1">
                 <li><a href="Department.php">CSE</a></li>

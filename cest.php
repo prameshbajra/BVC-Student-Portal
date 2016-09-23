@@ -4,6 +4,7 @@
 <head>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="main.css">
+    <link rel="shortcut icon" href="round.png" type="image/x-icon" />
     <script type="text/javascript" src="date_time.js"></script>
 </head>
 

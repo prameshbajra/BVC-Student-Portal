@@ -8,8 +8,7 @@
 
     <meta charset="UTF-8">
     <title>Login</title>
-    <link rel="shortcut icon" href="bvc.png" type="image/x-icon" />
-    <link rel="stylesheet" href="style.css">
+<link rel="shortcut icon" href="round.png" type="image/x-icon" />    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="animate.css">
 
@@ -61,7 +60,7 @@
                     <li><a href="principal.php">Principal</a></li>
                     <li><a href="#">Faculty</a>
                         <ul class="submenu1">
-                            <li><a href="#">CSE</a></li>
+                            <li><a href="st_table.php">CSE</a></li>
                             <li><a href="#">CE</a></li>
                             <li><a href="#">ME</a></li>
                             <li><a href="#">EEE</a></li>

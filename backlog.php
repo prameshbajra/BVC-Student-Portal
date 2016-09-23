@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="main.css">
     <link rel="shortcut icon" href="round.png" type="image/x-icon" />
     <script type="text/javascript" src="date_time.js"></script>
+
 </head>
 
 <body>
@@ -15,7 +16,7 @@
         </div>
         <div id="asideCont">
             <h2>BVC Engineering College, Odalarevu</h2>
-            <h3>Affiliated To JNTUK, Kakinada</h3> Accredited By NBA New Delhi and NAAC With 'A' Grade<br> Approved By AICTE, New Delhi<br> Established in 1997
+            <h3>Affiliated To  JNTUK, Kakinada</h3> Accredited By NBA New Delhi and NAAC With 'A' Grade<br> Approved By AICTE, New Delhi<br> Established in 1997<br><br>
 
         </div>
         <div class="imageRight">
@@ -28,8 +29,7 @@
         </div>
     </div>
     <div class="clear"></div>
-    <center>
-        <ul class="menu">
+    <ul class="menu">
         <li><a class="active" href="index.php">Home</a></li>
         <li><a href="contact.php">Contact</a></li>
         <li><a href="About.php">About Us</a></li>
@@ -75,9 +75,8 @@
         <li><a href="help.php">Help</a></li>
 
     </ul>
-    </center>
     <div class="bodyDiv">
-        <div class="forAside" style="margin-top:-0.5%;">
+        <div class="forAside" style="margin-top:-7px;">
             <aside id="buttonsAside">
                 <form class="navBar">
                     <nav id="navigationBar">
@@ -103,30 +102,45 @@
                 </form>
             </aside>
         </div>
-        <div class="container">
-
-            <header>
-                <h1>Academics Of BVCEC</h1>
-            </header>
-
-
-
-            <article>
-
-                <h1>UG Course(B.Tech.)</h1>
-
-                <h4>
-                    Computer Science Engineering<br>Civil Engineering<br>Mechanical Engineering<br>Electronics and Electrical Engineering<br>Electrical and Communication Engineering<br>
-                </h4>
-                <br>
-                <h1>PG Course(M.Tech.)</h1>
-
-                <h4>
-                    CSE<br>SOFTWARE ENGINEERING<br>ECE<br>POWER ELECTRONICS<br>THERMAL ENGINEERING<br>EMBEDDED SYSTEMS<br> SOIL MECHANICS AND FOUNDATION ENGINEERING<br>ADAVANCED MANUFACTURING SYSTEMS
-                </h4>
-
-            </article>
-        </div>
+        <center>
+            <div class="container">
+                <form action = "backlog2.php" method ="post" id = "backlog">
+			<h2>Display</h2>
+			<label> Regulation</label>
+			<select>
+				<option value = "r13">R13</option>
+				<option value = "r16">R16</option>
+			</select><br><br>
+			<label> Branch</label>
+			<select>
+				<option value = "basicScience">Basic Science</option>			
+				<option value = "cse">CSE</option>
+				<option value = "ece">ECE</option>
+				<option value = "ce">CE</option>
+				<option value = "eee">EEE</option>				
+				<option value = "me">ME</option>
+			</select>  
+			<br><br>
+			<label> Year</label>
+			<select>
+				<option value = "one">1st</option>			
+				<option value = "two">2nd</option>
+				<option value = "three">3rd</option>
+				<option value = "four">4th</option>
+			</select>
+			<br><br>
+			<label> Semester</label>
+			<select>
+				<option value = "one">I</option>			
+				<option value = "two">II</option>
+			</select><br><br>
+			<input type = "submit" value = "Submit" name = "submit"/>
+		</form>
+            </div>
+        </center>
+        <br>
+        <br>
+        <br>
     </div>
     <footer id="footer">
         <h4 id="left">Copyright &copy;</h4>

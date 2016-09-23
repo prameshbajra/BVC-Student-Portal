@@ -248,8 +248,9 @@ td {
 }
 
 #importExcel {
-    float: right;
-    margin: 200px 0 0 0;
+    display: inline-block;
+    width:45%;
+    margin: 40px 0 0 0;
 }
 
 #text {
@@ -267,7 +268,6 @@ td {
     height: 40px;
     width: 100px;
     margin-left: 190px;
-    margin-top: 25px;
     border-radius: 50px;
 }
 

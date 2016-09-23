@@ -9,7 +9,7 @@
     <meta charset="UTF-8">
     <title>Login</title>
     <script src="script.js"></script>
-    <link rel="shortcut icon" href="bvc.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="round.png" type="image/x-icon" />
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="animate.css">
@@ -62,13 +62,13 @@
                         </ul>
                     </li>
                     <li><a href="principal.php">Principal</a></li>
-                    
+                    <li><a href="#">Faculty</a>
                         <ul class="submenu1">
                             <li><a href="st_table.php">CSE</a></li>
-                            <li><a href="cest.php">CE</a></li>
-                            <li><a href="mest.php">ME</a></li>
-                            <li><a href="eeest.php">EEE</a></li>
-                            <li><a href="ecest.php">ECE</a></li>
+                            <li><a href="#">CE</a></li>
+                            <li><a href="#">ME</a></li>
+                            <li><a href="#">EEE</a></li>
+                            <li><a href="#">ECE</a></li>
                         </ul>
                     </li>
                     <li><a href="stlo.php">Students</a></li>
@@ -88,14 +88,15 @@
                             <li><a href="pio.php">PIO</a></li>
                         </ul>
                     </li>
+                    <li><a href="help.php">Help</a></li>
                 </ul>
             </center>
 
             <div class="bodyDiv">
-                <div class="forAside">
+                <div class="forAside" >
                     <aside id="buttonsAside">
                         <nav id="navigationBar">
-                            <ul class="sideBar">
+                            <ul class="sideBar" style="margin-left:-10px;">
                                 <li><a href="acadamic.php">Academics</a></li>
                                 <li><a href="administration.php">Administration</a></li>
                                 <li><a href="bvcnews.php">BVC News</a></li>
@@ -124,9 +125,9 @@
 
                     </br>
                     <div class="container">
-                        <h3 style="margin-left:-450px;">WELCOME TO BVCE STUDENT PORTAL</h3>
+                        <h3 style="margin-left:-160px;">WELCOME TO BVCE STUDENT PORTAL</h3>
                         <article>
-                            <div class="loginForm" style="margin-left:-190px;">
+                            <div class="loginForm">
                                 <form action="details.php" method="POST" class="form form--login">
                                     <br>
                                     <h2>LOGIN </h2>
@@ -146,51 +147,39 @@
                                     </div>
                                 </form>
                                 <br>
-                                <p class="text--center">New user?<a href="registrationPage.php" style="color:black;"> Please Register here</a> <span class="fontawesome-arrow-right"></span></p>
+                                <p class="text--center">New user?<a href="registrationPage.php" style="color:black;"> Please Register here</a>
                             </div>
                         </article>
                     </div>
                     </br>
                     </br>
                     </br>
-                    <div align="right">
-                        <div class="slideshow-container">
+                    <div align="right" style="width:100%;margin-left:-347px;">
+                        <div class="slideshow-container" style="width:100%;">
 
-                            <div class="mySlides fade" style="margin-left: 110px;margin-bottom: 60px;">
-                                <div class="numbertext">1 / 3</div>
-                                <img src="bvc_gurukul-756x250.jpg" style="margin-left: 410px;margin-top: -210px;width:75%;height:10%;">
+                            <div class="mySlides fade" style="width:100%;">
+
+                                <img src="bvc_gurukul-756x250.jpg" style="width:202%;height:400px;border-bottom:10px double black;">
+
+                            </div>
+
+                            <div class="mySlides fade" style="width:100%;height:350px;">
+
+                                <img src="af206dd800ed91ddb218932ded2b02e3coverBVCITS.jpg" style="width:202%;height:400px;border-bottom:10px double black;">
 
                             </div>
 
                             <div class="mySlides fade">
-                                <div class="numbertext">2 / 3</div>
-                                <img src="af206dd800ed91ddb218932ded2b02e3coverBVCITS.jpg" style="width:75%;margin-left: 410px;margin-top: -210px;height:5%">
-
-                            </div>
-
-                            <div class="mySlides fade">
-                                <div class="numbertext">3 / 3</div>
-                                <img src="4596970e54c7df92f2dfc2293cfcffb2.jpg" style="width:75%;margin-left: 410px;margin-top: -210px;height:10%">
+                                <img src="4596970e54c7df92f2dfc2293cfcffb2.jpg" style="width:202%;height:400px;border-bottom:10px double black;">
 
 
 
                             </div>
-                            </br>
-                            </br>
-                            </br>
-
-                          
                         </div>
                     </div>
                 </div>
-
-
-
             </div>
-
-
-
-            <div id="bottom_part" style="border:3px solid gray;margin-left: 990px;width:25%;">
+            <div id="bottom_part" style="border:3px solid gray;margin:80px 0 0 990px;width:25%;height:500px;">
                 <p class="newFooter">
                     <h2 align="center">
                         <u style="color: blue">Flash News</u>
@@ -253,7 +242,7 @@
                     myIndex = 1
                 }
                 x[myIndex - 1].style.display = "block";
-                setTimeout(carousel, 3500);
+                setTimeout(carousel, 4000);
             }
 
         </script>

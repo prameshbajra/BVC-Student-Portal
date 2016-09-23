@@ -113,16 +113,16 @@ function details_admin()
             <tr><th>Qualification</th><td>".$row['qua'] ."</td></tr>";
             echo "
             <tr><th>Designation</th><td>".$row['des'] ."</td></tr>";
-            echo "
+            /*echo "
             <tr><th>Department</th><td>".$row['department'] ."</td></tr>";
             echo "
             <tr><th>Date of Birth</th><td>".$row['dateofbirth'] ."</td></tr>";
             echo "
             <tr><th>Date of Joining</th><td>".$row['dateofjoining'] ."</td></tr>";
-
+            */
             echo "
             <tr><th>Specialisation</th><td>".$row['spe'] ."</td></tr>";
-            echo "
+            /*echo "
             <tr><th>Experience</th><td>".$row['experience'] ."</td></tr>";
 
             echo "
@@ -137,7 +137,7 @@ function details_admin()
             <tr><th>Email Id</th><td>".$row['emailid'] ."</td></tr>";
             echo "
             <tr><th>Mobile No.</th><td>".$row['mobileno'] ."</td></tr>";
-
+            */
         
    
 			

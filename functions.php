@@ -308,7 +308,7 @@ function details()
     {
         $dayBirth = $row['dob'];
         $mmdd = substr($dayBirth,5);
-        if($row['uname']==$uname && $row['pwd']==$pwd && $row['name']=="admin")
+        if($row['uname']==$uname && $row['pwd']==$pwd && $row['name']=="ADMIN")
 		{
             echo "<br><br><h2 align = 'center'>";
 			echo "Welcome admin";
@@ -602,6 +602,70 @@ function import()                                         // Function made for e
         }
     }
 }
+function import2()
+{
+    $conn = mysql_connect("localhost","root","");
+    mysql_select_db("info",$conn);
+    if(isset($_POST["submit"]))
+    {
+        $file = $_FILES['file']['tmp_name'];
+        $handle = fopen($file, "r");
+        $c = 0;
+		$x=0;
+        while(($filesop = fgetcsv($handle, 1000, ",")) !== false)
+        {
+			$x++;
+			if( $x==1 or $x==2)
+				continue;
+            $regulation= $filesop[0];
+            $branch= $filesop[1];
+            $year = $filesop[2];
+            $sem = $filesop[3];
+            $roll_no=$filesop[4];
+            $subject=$filesop[5];
+	    $internal=$filesop[6];
+	    $external=$filesop[7];
+            $marks=$filesop[8];
+            $status=$filesop[9];
+
+
+            $sql_insert="INSERT INTO backlogs
+            (regulation,
+            branch,
+            year,
+            sem,
+            roll_no,
+            subject,
+	    internal,
+	    external,
+            marks,
+            status
+           
+            )
+     VALUES
+            ('$regulation',
+            '$branch',
+            '$year',
+            '$sem',
+            '$roll_no',
+            '$subject',
+	    '$internal',
+	    '$external',
+            '$marks',
+            '$status'
+            );";
+            $c = $c + 1;
+            $sql = mysql_query($sql_insert) or die(mysql_error());
+        }
+
+        if($sql){
+            echo "<br><br>You database has imported successfully. You have inserted $c records";
+        }
+        else{
+            echo "<br><br>Sorry! There is some problem in the file. Please recheck and upload again.";
+        }
+    }
+}
 
 // Base overview of a table to admin ... some info present ...
 
@@ -626,7 +690,7 @@ function stu_table()
 
         while($row = mysqli_fetch_array($result))
         {
-			if ( $row['name']=="admin")
+			if ( $row['name']=='ADMIN')
 			continue;
 			echo "<tr><td>" . $row['roll_no'] . "</td><td>" . $row['name'] . "</td><td>" . $row['aggregate'] . "</td><td>" . $row['father_name'] . "</td><td>" . $row['email'] . "</td><td>" . $row['mobile'] . "</td><td>" . $row['father_mobile'] . "</td><td style = 'background-color:darkgray;'><a href='details_admin.php?roll_no=".$row['roll_no']."''>View Full Details</a></td></tr>";
 		}
@@ -644,111 +708,77 @@ function details_admin()
     $flag=0;
     $roll_no=$_REQUEST['roll_no'];
     $result = mysqli_query($con,"SELECT * FROM profiles");
-
+    $today = date('m-d');
 
     while($row = mysqli_fetch_array($result))
     {
 
         if($row['roll_no']==$roll_no)
         {
-			echo "<table border='0' cellspacing='30px'>
-			<form class='form form--login' action='details_update.php' method='POST'>
-			<br>";
-			//echo "<img src='uploads/".$row['image']."' style = 'width : 200px; margin : 10px 0 -310px 950px;'>";
+
+
+            echo "<div align=CENTER>";
+            echo "<tr><th>Welcome <label style='color:blue;'>" . $row['name'] . "</label></td></tr><br><br>";
+            if ($row['dob'] == $today)
+            {
+                echo "<p style ='margin-top:-100px;position:absolute;margin-left:70%;'>Many Many Happy Returns of The Day Mr ". $row['name']."</p>";               
+            }
+            echo"</div>";
+            echo "<div align=center>";
+            echo "<img src='uploads/".$row['roll_no'].".jpg' style = 'width:100px ;height :120px ;margin-left:340px;margin-top:-35px;position:absolute;'>";
+            echo "<table border='0' cellspacing='1px'><form class='form form--login' action='details_update.php' method='POST'<br>";
+
             echo "<br><br><tr><th> Roll Number</td><td><input class='loginName' type='text' class='form__input' name='roll_no'  value='".$row['roll_no'] ."'></td></tr>";
+            $temp=$row['roll_no'];
+           
+
             echo "<tr><th> Name of student (As per SSC)</td><td><input class='loginName' type='text' class='form__input' value='".$row['name'] ."' name='name' ></td></tr>";
             echo "<tr><th> DOB</td><td><input class='loginName' type='text' class='form__input' value='"       .$row['dob'] ."' name='dob'  ></td></tr>";
             echo "<tr><th> Gender</td><td><input class='loginName' type='text' class='form__input' value='"       .$row['sex'] ."' name='sex'  ></td></tr>";
             echo "<tr><th> Father's Name</td><td><input class='loginName' type='text' class='form__input' value='"    .$row['father_name'] . "'  name='father_name'  ></td></tr>";
             echo "<tr><th> Address</td><td><input class='loginName' type='text' class='form__input' value='"       .$row['address'] ."'  name='address' ></td></tr>";
-			echo "<tr><th> Email.</td><td><input class='loginName' type='text' class='form__input' value='"       .$row['email'] ."'  name='email' ></td></tr>";
+            echo "<tr><th> Email.</td><td><input class='loginName' type='text' class='form__input' value='"       .$row['email'] ."'  name='email' ></td></tr>";
             echo "<tr><th> Mobile No.</td><td><input class='loginName' type='text' class='form__input' value='"       .$row['mobile'] ."' name='mobile' ></td></tr>";
-			echo "<tr><th> Aadhaar Id</td><td><input class='loginName' type='text' class='form__input' value='"       .$row['aadhaar_id'] ."' name='aadhaar_id' ></td></tr>";
+            echo "<tr><th> Aadhaar Id</td><td><input class='loginName' type='text' class='form__input' value='"       .$row['aadhaar_id'] ."' name='aadhaar_id' ></td></tr>";
             echo "<tr><th> Father's Mobile Number</td><td><input class='loginName' type='text' class='form__input' value='".$row['father_mobile'] ."' name='father_mobile'  ></td></tr>";
-			echo "<tr><th> Username</td><td><input class='loginName' type='text' class='form__input' value='"       .$row['uname'] ."' name='uname' ></td></tr>";
-			echo "<tr><th> Password</td><td><input class='loginName' type='text' class='form__input' value='"       .$row['pwd'] ."'  name='pwd'  ></td></tr>";
-			echo "<tr><th> Nationality</td><td><input class='loginName' type='text' class='form__input' value='"       .$row['nationality'] ."'   name='nationality' ></td></tr>";
-			echo "<tr><th> Caste</td><td><input class='loginName' type='text' class='form__input' value='"       .$row['caste'] ."'    name='caste' ></td></tr>";
-			echo "<tr><th> 10th</td><td><input class='loginName' type='text' class='form__input' value='"       .$row['th10'] ."'   name='th10' ></td></tr>";
-			echo "<tr><th> +2Sc</td><td><input class='loginName' type='text' class='form__input' value='"       .$row['sc2'] ."'   name='sc2'  ></td></tr>";
-			echo "<tr><th> Diploma or +3Sc</td><td><input class='loginName' type='text' class='form__input' value='"       .$row['diploma'] ."' name='diploma' ></td></tr>";
-			$temp = $row['roll_no'];
+            echo "<tr><th> Username</td><td><input class='loginName' type='text' class='form__input' value='"       .$row['uname'] ."' name='uname' ></td></tr>";
+            echo "<tr><th> Password</td><td><input class='loginName' type='text' class='form__input' value='"       .$row['pwd'] ."'  name='pwd'  ></td></tr>";
+            echo "<tr><th> Nationality</td><td><input class='loginName' type='text' class='form__input' value='"       .$row['nationality'] ."'   name='nationality' ></td></tr>";
+            echo "<tr><th> Caste</td><td><input class='loginName' type='text' class='form__input' value='"       .$row['caste'] ."'    name='caste' ></td></tr>";
+            echo "<tr><th> 10th</td><td><input class='loginName' type='text' class='form__input' value='"       .$row['th10'] ."'   name='th10' ></td></tr>";
+            echo "<tr><th> +2Sc</td><td><input class='loginName' type='text' class='form__input' value='"       .$row['sc2'] ."'   name='sc2'  ></td></tr>";
+            echo "<tr><th> Diploma or +3Sc</td><td><input class='loginName' type='text' class='form__input' value='"       .$row['diploma'] ."' name='diploma' ></td></tr>";
+           
 
-			//Beginning new table here...
 
-			echo "</table>";
-			echo "<p id='achievements'><u>B.Tech Marks(%)</u></p>";
-			echo "<table class = 'tg'>";
-          	echo "<tr>";
-            echo "<td class='tg1'>Semester</td>";
-            echo "<td class='tg2'>I year</td>";
-            echo "<td class='tg2'>II year</td>";
-            echo "<td class='tg2'>III year</td>";
-            echo "<td class='tg2'>IV year</td>";
-            echo "</tr>";
-            echo "<tr>";
-            echo "<td class='tg3'>1st</td>";
-            echo "<td class='tg3'><input class='loginNameWhite' type='text' class='form__input' value='".$row['one_1'] ."' name='one_1' ></td>";
-            echo "<td class='tg3'><input class='loginNameWhite' type='text' class='form__input' value='".$row['two_1'] ."' name='two_1' ></td>";
-            echo "<td class='tg3'><input class='loginNameWhite' type='text' class='form__input' value='".$row['three_1'] ."' name='three_1' ></td>";
-            echo "<td class='tg3'><input class='loginNameWhite' type='text' class='form__input' value='".$row['four_1'] ."' name='four_1' ></td>";
-            echo "</tr>";
-            echo "<tr>";
-            echo "<td class='tg3'>2nd</td>";
-            echo "<td class='tg3'><input class='loginNameWhite' type='text' class='form__input' value='".$row['one_2'] ."' name='one_2' ></td>";
-            echo "<td class='tg3'><input class='loginNameWhite' type='text' class='form__input' value='".$row['two_2'] ."' name='two_2' ></td>";
-            echo "<td class='tg3'><input class='loginNameWhite' type='text' class='form__input' value='".$row['three_2'] ."' name='three_2' ></td>";
-            echo "<td class='tg3'><input class='loginNameWhite' type='text' class='form__input' value='".$row['four_2'] ."' name='four_2' ></td>";
-            echo "</tr>";
+            echo "<tr><td colspan='2'><p id='achievements'><u>B.Tech Marks (in %)</u></p></td></tr>";
+            echo "<tr><td>I-I</td><td><input class='loginName' type='text' class='form__input' type='text' value='".$row['one_1'] ."' name='one_1' ></td></tr>";
+            echo "<tr><td>I-II</td><td><input class='loginName' type='text' class='form__input' type='text' value='".$row['one_2'] ."' name='one_2' ></td></tr>";
+            echo "<tr><td>II-I</td><td><input class='loginName' type='text' class='form__input' type='text' value='".$row['two_1'] ."' name='two_1' ></td></tr>";
+            echo "<tr><td>II-II</td><td><input class='loginName' type='text' class='form__input' type='text' value='".$row['two_2'] ."' name='two_2' ></td></tr>";
+            echo "<tr><td>III-I</td><td><input class='loginName' type='text' class='form__input' type='text' value='".$row['three_1'] ."' name='three_1' ></td></tr>";
+            echo "<tr><td>III-II</td><td><input class='loginName' type='text' class='form__input' type='text' value='".$row['three_2'] ."' name='three_2' ></td></tr>";
+            echo "<tr><td>IV-I</td><td><input class='loginName' type='text' class='form__input' type='text' value='".$row['four_1'] ."' name='four_1' ></td></tr>";
+            echo "<tr><td>IV-II</td><td><input class='loginName' type='text' class='form__input' type='text' value='".$row['four_2'] ."' name='four_2' ></td></tr>";
+
+            echo "<tr><th> Cummulative Percentage</td><td><input class='loginName' type='text' class='form__input' value='".$row['aggregate'] ."' name='aggregate' ></td></tr>";
+            echo "<tr><th> Attendance</td><td><input class='loginName' type='text' class='form__input' value='"       .$row['attendance'] ."' name='attendace' ></td></tr>";
+            echo "<tr><th>Member of </td><td><input class='loginName' type='text' class='form__input' value='"       .$row['members']."' name='members' ></td></tr>";
+            echo "<tr><th>Hobbies </td><td><input class='loginName' type='text' class='form__input' value='"       .$row['hobbies']."' name='hobbies' ></td></tr>";
+
+            echo "<tr><td colspan='2'><p id='achievements'><u>Achievements</u></p></td></tr>";
+
+            echo "<tr><td>Academic </td><td><input class='loginName' type='text' class='form__input' value='".$row['academics1']."' name='academics1' ></td></tr>";
+            echo "<tr><td>Curricular</td><td><input class='loginName' type='text' class='form__input' value='".$row['curricular1']."' name='curricular1' ></td></tr>";
+            echo "<tr><td>Co-curricular</td><td><input class='loginName' type='text' class='form__input' value='".$row['co_curricular1']."' name='co_curricular1' ></td></tr>";
+            echo "<tr><td>ExtraCurricular</td><td><input class='loginName' type='text' class='form__input' value='".$row['extra_curricular1']."' name='extra_curricular1' ></td></tr>";
+            echo "<tr><td>Others</td><td><input class='loginName' type='text' class='form__input' value='".$row['others1']."' name='others1' ></td></tr>";
+            
+
             echo "</table>";
-			echo "</table><table border='0' cellspacing='30px'> ";
-			echo "<tr><th> Cummulative Percentage</td><td><input class='loginName' type='text' class='form__input' value='".$row['aggregate'] ."' name='aggregate' ></td></tr>";
-			echo "<tr><th> Attendance</td><td><input class='loginName' type='text' class='form__input' value='"       .$row['attendance'] ."' name='attendace' ></td></tr>";
-			echo "<tr><th>Member of </td><td><input class='loginName' type='text' class='form__input' value='"       .$row['members']."' name='members' ></td></tr>";
-			echo "<tr><th>Hobbies </td><td><input class='loginName' type='text' class='form__input' value='"       .$row['hobbies']."' name='hobbies' ></td></tr>";
-			echo "</table>";
+echo"</div>";
 
 
-            //Table academiics starts ....
-
-            echo "<p id='achievements'><u>Achievements</u></p>";
-            echo "<table class='tg'>";
-            echo "<tr>";
-            echo "<td class='tg1'>Academic </td>";
-            echo "<td class='tg2'>Curricular</td>";
-            echo "<td class='tg2'>Co-curricular</td>";
-            echo "<td class='tg2'>ExtraCurricular</td>";
-            echo "<td class='tg2'>Others</td>";
-            echo "</tr>";
-            echo "<tr>";
-            echo "<td class='tg3'><input class='loginNameWhite' type='text' class='form__input' value='".$row['academics1']."' name='academics1' ></td>";
-            echo "<td class='tg3'><input class='loginNameWhite' type='text' class='form__input' value='".$row['curricular1']."' name='curricular1' ></td>";
-            echo "<td class='tg3'><input class='loginNameWhite' type='text' class='form__input' value='".$row['co_curricular1']."' name='co_curricular1' ></td>";
-            echo "<td class='tg3'><input class='loginNameWhite' type='text' class='form__input' value='".$row['extra_curricular1']."' name='extra_curricular1' ></td>";
-            echo "<td class='tg3'><input class='loginNameWhite' type='text' class='form__input' value='".$row['others1']."' name='others1' ></td>";
-            echo "</tr>";
-            echo "<tr>";
-            echo "<td class='tg2'><input class='loginNameWhite' type='text' class='form__input' value='".$row['academics2']."' name='academics2' ></td>";
-            echo "<td class='tg2'><input class='loginNameWhite' type='text' class='form__input' value='".$row['curricular2']."' name='curricular2' ></td>";
-            echo "<td class='tg2'><input class='loginNameWhite' type='text' class='form__input' value='".$row['co_curricular2']."' name='co_curricular2' ></td>";
-            echo "<td class='tg2'><input class='loginNameWhite' type='text' class='form__input' value='".$row['extra_curricular2']."' name='extra_curricular2' ></td>";
-            echo "<td class='tg2'><input class='loginNameWhite' type='text' class='form__input' value='".$row['others2']."' name='others2' ></td>";
-            echo "</tr>";
-            echo "<tr>";
-            echo "<td class='tg2'><input class='loginNameWhite' type='text' class='form__input' value='".$row['academics3']."' name='academics3' ></td>";
-            echo "<td class='tg2'><input class='loginNameWhite' type='text' class='form__input' value='".$row['curricular3']."' name='curricular3' ></td>";
-            echo "<td class='tg2'><input class='loginNameWhite' type='text' class='form__input' value='".$row['co_curricular3']."' name='co_curricular3' ></td>";
-            echo "<td class='tg2'><input class='loginNameWhite' type='text' class='form__input' value='".$row['extra_curricular3']."' name='extra_curricular3' ></td>";
-            echo "<td class='tg2'><input class='loginNameWhite' type='text' class='form__input' value='".$row['others3']."' name='others3' ></td>";
-            echo "</tr>";
-            echo "<tr>";
-            echo "<td class='tg2'><input class='loginNameWhite' type='text' class='form__input' value='".$row['academics4']."' name='academics4' ></td>";
-            echo "<td class='tg2'><input class='loginNameWhite' type='text' class='form__input' value='".$row['curricular4']."' name='curricular4' ></td>";
-            echo "<td class='tg2'><input class='loginNameWhite' type='text' class='form__input' value='".$row['co_curricular4']."' name='co_curricular4' ></td>";
-            echo "<td class='tg2'><input class='loginNameWhite' type='text' class='form__input' value='".$row['extra_curricular4']."' name='extra_curricular4' ></td>";
-            echo "<td class='tg2'><input class='loginNameWhite' type='text' class='form__input' value='".$row['others4']."' name='others4' ></td>";
-            echo "</tr>";
-            echo "</table>";
 
             $flag=1;
         }
@@ -763,16 +793,18 @@ function details_admin()
 		{
 			echo "<div class = 'image_upload'><img src='".$row['image']."' style = 'margin : 0 0 0 200px;'></div>";
 		}
-	}*/
+	}
+    */
     if($flag==0)
     {
         echo "<p style = 'margin : 150px 0 0 50px;'><center>The roll number is not registered in the database</p></center>";
     }
-    echo "<input type = 'submit' id = 'submitForm' class = 'animated bounce' name  = 'submitForm' value = 'Update' >";
+    echo "<input type = 'submit' name  = 'submitForm' value = 'Update' style = 'margin:20px 0 0 50%;position:absolute;width:90px;height:50px;border-radius:20px;background-color:firebrick;' >";
     echo "</form></table>";
 	mysqli_close($con);
 
 }
+
 
 // Update that can be done by admin only...
 
@@ -841,25 +873,25 @@ function details_update()
     $members = $_POST['members'];
 	$hobbies = $_POST['hobbies'];
     $academics1 = $_POST['academics1'];
-    $academics2 = $_POST['academics2'];
+    /*$academics2 = $_POST['academics2'];
     $academics3 = $_POST['academics3'];
-    $academics4 = $_POST['academics4'];
+    $academics4 = $_POST['academics4'];*/
     $curricular1 = $_POST['curricular1'];
-    $curricular2 = $_POST['curricular2'];
+    /*$curricular2 = $_POST['curricular2'];
     $curricular3 = $_POST['curricular3'];
-    $curricular4 = $_POST['curricular4'];
+    $curricular4 = $_POST['curricular4'];*/
     $co_curricular1 = $_POST['co_curricular1'];
-    $co_curricular2 = $_POST['co_curricular2'];
+    /*$co_curricular2 = $_POST['co_curricular2'];
     $co_curricular3 = $_POST['co_curricular3'];
-    $co_curricular4 = $_POST['co_curricular4'];
+    $co_curricular4 = $_POST['co_curricular4'];*/
     $extra_curricular1 = $_POST['extra_curricular1'];
-    $extra_curricular2 = $_POST['extra_curricular2'];
+    /*$extra_curricular2 = $_POST['extra_curricular2'];
     $extra_curricular3 = $_POST['extra_curricular3'];
-    $extra_curricular4 = $_POST['extra_curricular4'];
+    $extra_curricular4 = $_POST['extra_curricular4'];*/
     $others1 = $_POST['others1'];
-    $others2 = $_POST['others2'];
+    /*$others2 = $_POST['others2'];
     $others3 = $_POST['others3'];
-    $others4 = $_POST['others4'];
+    $others4 = $_POST['others4'];*/
     if($_POST['one_1']==0)
 			$_POST['aggregate']=0;
 	elseif($_POST['one_2']==0)
@@ -879,9 +911,9 @@ function details_update()
 	else
 			$_POST['aggregate']=($_POST['one_1']+$_POST['one_2']+$_POST['two_1']+$_POST['two_2']+$_POST['three_1']+$_POST['three_2']+$_POST['four_1']+$_POST['four_2'])/8;
 	$agg=$_POST['aggregate'];
-	$sql = "UPDATE profiles SET name='$name', dob='$dob', sex='$sex', father_name='$father_name', address='$address', email='$email',  mobile='$mobile', aadhaar_id='$aadhaar_id', father_mobile='$father_mobile',  uname='$uname', pwd='$pwd', nationality='$nationality', caste='$caste', th10='$th10', sc2='$sc2', diploma='$diploma',  attendance='$attendance', one_1='$one_1', two_1='$two_1', three_1='$three_1', four_1='$four_1', one_2='$one_2', two_2='$two_2', three_2='$three_2', four_2='$four_2', aggregate='$agg', members='$members', hobbies='$hobbies', academics1='$academics1', curricular1='$curricular1', co_curricular1='$co_curricular1', extra_curricular1='$extra_curricular1', others1='$others1', academics2='$academics2', curricular2='$curricular2', co_curricular2='$co_curricular2', extra_curricular2='$extra_curricular2', others2='$others2', academics3='$academics3', curricular3='$curricular3', co_curricular3='$co_curricular3', extra_curricular3='$extra_curricular3', others3='$others3', academics4='$academics4', curricular4='$curricular4', co_curricular4='$co_curricular4', extra_curricular4='$extra_curricular4', others4='$others4'
-	WHERE roll_no='$roll_no' ";
-	$ress = mysqli_query($con,$sql) or die(mysqli_error($con));
+	$sql = "UPDATE profiles SET name='$name', dob='$dob', sex='$sex', father_name='$father_name', address='$address', email='$email',  mobile='$mobile', aadhaar_id='$aadhaar_id', father_mobile='$father_mobile',  uname='$uname', pwd='$pwd', nationality='$nationality', caste='$caste', th10='$th10', sc2='$sc2', diploma='$diploma',  attendance='$attendance', one_1='$one_1', two_1='$two_1', three_1='$three_1', four_1='$four_1', one_2='$one_2', two_2='$two_2', three_2='$three_2', four_2='$four_2', aggregate='$agg', members='$members', hobbies='$hobbies',academics1='$academics1',curricular1='$curricular1',co_curricular1='$co_curricular1',extra_curricular1='$extra_curricular1'   
+	WHERE roll_no='$roll_no'";
+    $ress = mysqli_query($con,$sql) or die(mysqli_error($con));
     echo "<center><br><br><br><br><br><br> Data Registered </center>";
     mysqli_close($con);
 }
@@ -999,5 +1031,39 @@ function emailSend()
 		mail($emailRegd,$subject,$message,$from) or die("Here 2".mysql_error());
 	}
 	mysql_close();
-	}
+}
+
+
+/*   Not a compulsory thing ....
+
+
+function backlog()
+{
+        $con =mysqli_connect("localhost","root","");
+        mysqli_select_db($con,"info");
+        $flag=0;
+        $result = mysqli_query($con,"SELECT * FROM backlog ORDER BY roll_no");
+	if (isset($_POST['submit']))
+        echo "<table id = 'cust'>
+		<tr>
+			<th> Regulation</th>
+			<th> Branch</th>
+			<th> Year</th>
+			<th> Semester</th>
+			<th> Registration Number</th>
+			<th> Subject</th>
+			<th> Status </th>
+		</tr>
+        <br>";
+
+        while($row = mysqli_fetch_array($result))
+        {
+			if ( $row['name']=="admin")
+			continue;
+			echo "<tr><td>" . $row['roll_no'] . "</td><td>" . $row['name'] . "</td><td>" . $row['aggregate'] . "</td><td>" . $row['father_name'] . "</td><td>" . $row['email'] . "</td><td>" . $row['mobile'] . "</td><td>" . $row['father_mobile'] . "</td><td style = 'background-color:darkgray;'><a href='details_admin.php?roll_no=".$row['roll_no']."''>View Full Details</a></td></tr>";
+		}
+
+      	echo "</table>";
+        mysqli_close($con);
+}*/
 ?>

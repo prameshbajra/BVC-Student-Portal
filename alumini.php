@@ -8,7 +8,7 @@
 
     <meta charset="UTF-8">
     <title>Login</title>
-    <link rel="shortcut icon" href="bvc.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="round.png" type="image/x-icon" />
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="animate.css">
@@ -28,8 +28,7 @@
             </div>
             <div id="asideCont">
                 <h2>BVC Engineering College, Odalarevu</h2>
-                <h3>Affiliated To  JNTUK, Kakinada</h3> Accredited By NBA New Delhi and NAAC With 'A' Grade<br> Approved By AICTE, New Delhi<br> Established in 1997
-
+                <h3>Affiliated To JNTUK, Kakinada</h3> Accredited By NBA New Delhi and NAAC With 'A' Grade<br> Approved By AICTE, New Delhi<br> Established in 1997
             </div>
             <div class="imageRight">
                 <span id="date_time"></span>
@@ -49,7 +48,7 @@
                     <li><a href="contact.php">Contact</a></li>
                     <li><a href="About.php">About Us</a></li>
                     <li><a href="vision.php">Vision &amp; Mission</a></li>
-                    <li><a href="asd.php">Management</a>
+                    <li><a href="#">Management</a>
                         <ul class="submenu">
                             <li><a href="founderchairman.php">Founder-Chairman</a></li>
                             <li><a href="secretary.php">Secretary</a></li>
@@ -59,12 +58,12 @@
                         </ul>
                     </li>
                     <li><a href="#">Principal</a></li>
-                    <li><a href="#">Faculty</a></li>
-                    <li><a href="stlo.php">Students</a></li>
+                    <li><a href="faculty.php">Faculty</a></li>
+                    <li><a href="#">Students</a></li>
                     <li><a href="Department.php"> Departments</a>
                         <ul class="submenu">
-                           <li><a href="Department.php">CSE</a></li>
-              
+                            <li><a href="Department.php">CSE</a></li>
+
                             <li><a href="civil.php">CE</a></li>
                             <li><a href="mech.php">ME</a></li>
                             <li><a href="eee.php">EEE</a></li>
@@ -91,7 +90,7 @@
                                         <li><a href="administration.php">Administration</a></li>
                                         <li><a href="bvcnews.php">BVC News</a></li>
                                         <li><a href="forthcoming.php">Forthcoming Event</a></li>
-                                <li><a href="emailnew.php">E-mail to students</a></li>
+                                        <li><a href="emailnew.php">E-mail to students</a></li>
                                         <li><a href="sms.php">SMS to Parents/Students</a></li>
                                         <li><a href="recuriment.php">Recruitment</a></li>
                                         <li><a href="proffesional.php">Professional Body</a></li>
@@ -100,7 +99,7 @@
                                         <li><a href="training.php">Training</a></li>
                                         <li><a href="games.php">Games And Sports</a></li>
                                         <li><a href="placements.php">Placement</a></li>
-                                <li><a href="feedback.php">Feedback to College</a></li>
+                                        <li><a href="feedback.php">Feedback to College</a></li>
                                         <li><a href="alumini.php">Alumini</a></li>
                                         <li><a href="notice.php">Notices &amp; Circulars</a></li>
                                     </ul>
@@ -132,7 +131,7 @@
                                     </div>
                                 </form>
                                 <br>
-                                <p class="text--center">New user?<a href="reg.php" style="color:black;"> Please Register here ...  </a> <span class="fontawesome-arrow-right"></span></p>
+                                <p class="text--center">New user?<a href="reg.php" style="color:black;"> Please Register here ...  </a>
                             </div>
                         </center>
                     </div>
@@ -143,14 +142,13 @@
 
 
                 </div>
-                <footer id="bottom-part">
-                    <p class="newFooter"> Copyright &copy; -2016</p>
-                    <p class="newFoot">BVC Engineering College @ CSE</p>
-
-                </footer>
             </center>
         </div>
     </body>
+    <footer id="footer">
+        <h4 id="left">Copyright &copy;</h4>
+        <h4 id="right">BVCEC</h4>
+    </footer>
 
 </html>
 
@@ -162,7 +160,7 @@ $username=$_POST['username'];
 $password=$_POST['password'];
 if(isset($_POST['commit'])){
 	
-	mysql_connect("localhost","root","");
+	mysql_connect("localhost","root","bvcecskrv");
 	mysql_select_db("ex");
 	$query=mysql_query("select * from al");
 	while($row=mysql_fetch_array($query)){

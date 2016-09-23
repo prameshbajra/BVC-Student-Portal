@@ -8,7 +8,7 @@
 
     <meta charset="UTF-8">
     <title>Login</title>
-    <link rel="shortcut icon" href="bvc.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="round.png" type="image/x-icon" />
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="animate.css">
@@ -27,10 +27,10 @@
                 <img src="round.png" />
             </div>
             <div id="asideCont">
-                <h1>बोनम  वेंकटा  चालामाया इंजीनियरिंग महाविध्यालय
-</h1>
+                <h1>बोनम वेंकटा चालामाया इंजीनियरिंग महाविध्यालय
+                </h1>
                 <h2>Bonam Venkata Chalamayya Engineering College,<br> Odalarevu</h2>
-                <h3>Affiliated To  JNTUK, Kakinada</h3> Accredited By NBA New Delhi and NAAC With 'A' Grade<br> Approved By AICTE, New Delhi<br> Established in 1997<br><br>
+                <h3>Affiliated To JNTUK, Kakinada</h3> Accredited By NBA New Delhi and NAAC With 'A' Grade<br> Approved By AICTE, New Delhi<br> Established in 1997<br><br>
                 <?php
                 echo "Today's Date : ".date("Y/m/d")." And Time ".date("h:i")."<br><br>";
             ?>
@@ -53,7 +53,7 @@
                     <li><a href="contact.php">Contact</a></li>
                     <li><a href="About.php">About Us</a></li>
                     <li><a href="vision.php">Vision &amp; Mission</a></li>
-                    <li><a href="asd.php">Management</a>
+                    <li><a href="#">Management</a>
 
                         <ul class="submenu">
                             <li><a href="founderchairman.php">Founder-Chairman</a></li>
@@ -66,14 +66,14 @@
                     <li><a href="principal.php">Principal</a></li>
                     <li><a href="#">Faculty</a>
                         <ul class="submenu1">
-                            <li><a href="#">CSE</a></li>
+                            <li><a href="st_table.php">CSE</a></li>
                             <li><a href="#">CE</a></li>
                             <li><a href="#">ME</a></li>
                             <li><a href="#">EEE</a></li>
                             <li><a href="#">ECE</a></li>
                         </ul>
                     </li>
-            
+                    <li><a href="stlo.php">Students</a></li>
                     <li><a href="#"> Departments</a>
                         <ul class="submenu1">
                             <li><a href="Department.php">CSE</a></li>
@@ -85,7 +85,7 @@
                         </ul>
                     </li>
                     <li><a href="#">Accredition</a>
-                        <ul class="submenu">
+                        <ul class="submenu1">
                             <li><a href="naac.php">NAAC</a></li>
                             <li><a href="nba.php">NBA</a></li>
                             <li><a href="pio.php">PIO</a></li>
@@ -128,7 +128,9 @@
             </center>
         </div>
         <footer id="footer">
-            <h4 id="left">Copyright &copy; - <?php echo "20".date('y');?></h4>
+            <h4 id="left">Copyright &copy; -
+                <?php echo "20".date('y');?>
+            </h4>
             <h4 id="right">BVCEC</h4>
         </footer>
     </body>

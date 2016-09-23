@@ -58,7 +58,7 @@
                     </li>
                     <li><a href="#">Principal</a></li>
                     <li><a href="#">Faculty</a></li>
-                    <li><a href="#">Students</a></li>
+                    <li><a href="stlo.php">Students</a></li>
                     <li><a href="Department.php"> Departments</a>
                         <ul class="submenu">
                             <li><a href="#">CSE</a></li>

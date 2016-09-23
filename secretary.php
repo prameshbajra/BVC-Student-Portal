@@ -8,7 +8,7 @@
 
     <meta charset="UTF-8">
     <title>Login</title>
-    <link rel="shortcut icon" href="bvc.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="round.png" type="image/x-icon" />
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="animate.css">
@@ -28,10 +28,10 @@
                 <img src="round.png" />
             </div>
             <div id="asideCont">
-                <h1>बोनम  वेंकटा  चालामाया इंजीनियरिंग महाविध्यालय
-</h1>
+                <h1>बोनम वेंकटा चालामाया इंजीनियरिंग महाविध्यालय
+                </h1>
                 <h2>Bonam Venkata Chalamayya Engineering College,<br> Odalarevu</h2>
-                <h3>Affiliated To  JNTUK, Kakinada</h3> Accredited By NBA New Delhi and NAAC With 'A' Grade<br> Approved By AICTE, New Delhi<br> Established in 1997<br><br>
+                <h3>Affiliated To JNTUK, Kakinada</h3> Accredited By NBA New Delhi and NAAC With 'A' Grade<br> Approved By AICTE, New Delhi<br> Established in 1997<br><br>
 
             </div>
             <div class="imageRight">
@@ -65,18 +65,18 @@
                     <li><a href="principal.php">Principal</a></li>
                     <li><a href="#">Faculty</a>
                         <ul class="submenu1">
-                            <li><a href="#">CSE</a></li>
+                            <li><a href="st_table.php">CSE</a></li>
                             <li><a href="#">CE</a></li>
                             <li><a href="#">ME</a></li>
                             <li><a href="#">EEE</a></li>
                             <li><a href="#">ECE</a></li>
                         </ul>
                     </li>
-            
+                    <li><a href="stlo.php">Student</a></li>
                     <li><a href="#"> Departments</a>
                         <ul class="submenu1">
-                             <li><a href="Department.php">CSE</a></li>
-              
+                            <li><a href="Department.php">CSE</a></li>
+
                             <li><a href="civil.php">CE</a></li>
                             <li><a href="mech.php">ME</a></li>
                             <li><a href="eee.php">EEE</a></li>
@@ -103,7 +103,7 @@
                                         <li><a href="administration.php">Administration</a></li>
                                         <li><a href="bvcnews.php">BVC News</a></li>
                                         <li><a href="forthcoming.php">Forthcoming Event</a></li>
-                                <li><a href="emailnew.php">E-mail to students</a></li>
+                                        <li><a href="emailnew.php">E-mail to students</a></li>
                                         <li><a href="sms.php">SMS to Parents/Students</a></li>
                                         <li><a href="recuriment.php">Recruitment</a></li>
                                         <li><a href="proffesional.php">Professional Body</a></li>
@@ -112,7 +112,7 @@
                                         <li><a href="training.php">Training</a></li>
                                         <li><a href="games.php">Games And Sports</a></li>
                                         <li><a href="placements.php">Placement</a></li>
-                                <li><a href="feedback.php">Feedback to College</a></li>
+                                        <li><a href="feedback.php">Feedback to College</a></li>
                                         <li><a href="alumini.php">Alumini</a></li>
                                         <li><a href="notice.php">Notices &amp; Circulars</a></li>
                                     </ul>

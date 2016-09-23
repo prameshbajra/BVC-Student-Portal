@@ -9,8 +9,7 @@
     <title>Student Details Information.</title>
     <link rel="stylesheet" href="style_detailadmin.css">
     <link rel="stylesheet" href="animate.css">
-    <link rel="shortcut icon" href="bvc.png" type="image/x-icon" />
-
+<link rel="shortcut icon" href="round.png" type="image/x-icon" />
 </head>
 <body>
 

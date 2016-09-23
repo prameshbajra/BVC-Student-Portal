@@ -7,7 +7,7 @@
 
 * {
     box-sizing: border-box;
-    color: gray;
+    color: black;
 }
 
 html {
@@ -339,5 +339,17 @@ label {
 
 #sex_option option {
     background-color: white;
+    color: black;
+}
+
+.regDiv{
+    width:100%;
+    height: 80px;
+    position: fixed;
+    color: black;
+    background-color: burlywood;
+}
+.regPage h1{
+    margin-left: 5%;
     color: black;
 }

@@ -51,7 +51,8 @@
                             <li><a href="#">ECE</a></li>
                         </ul>
                     </li>
-            
+                                <li><a href="stlo.php">Students</a></li>
+
                     <li><a href="index.php"> Departments</a>
                         <ul class="submenu1">
                             <li><a href="Department.php">CSE</a></li>

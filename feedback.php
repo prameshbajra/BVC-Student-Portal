@@ -3,6 +3,7 @@
 
 <head>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="round.png" type="image/x-icon" />
     <link rel="stylesheet" href="main.css">
     <script type="text/javascript" src="date_time.js"></script>
 
@@ -27,7 +28,7 @@
             </div>
             <div id="asideCont">
                 <h2>BVC Engineering College, Odalarevu</h2>
-                <h3>Affiliated To  JNTUK, Kakinada</h3> Accredited By NBA New Delhi and NAAC With 'A' Grade<br> Approved By AICTE, New Delhi<br> Established in 1997<br><br>
+                <h3>Affiliated To JNTUK, Kakinada</h3> Accredited By NBA New Delhi and NAAC With 'A' Grade<br> Approved By AICTE, New Delhi<br> Established in 1997<br><br>
 
             </div>
             <div class="imageRight">
@@ -59,14 +60,14 @@
             <li><a href="principal.php">Principal</a></li>
             <li><a href="#">Faculty</a>
                 <ul class="submenu1">
-                    <li><a href="#">CSE</a></li>
+                    <li><a href="st_table.php">CSE</a></li>
                     <li><a href="#">CE</a></li>
                     <li><a href="#">ME</a></li>
                     <li><a href="#">EEE</a></li>
                     <li><a href="#">ECE</a></li>
                 </ul>
             </li>
-    
+            <li><a href="stlo.php">Students</a></li>
             <li><a href="#"> Departments</a>
                 <ul class="submenu1">
                     <li><a href="Department.php">CSE</a></li>
@@ -128,7 +129,9 @@
             </center>
         </div>
         <footer id="footer">
-            <h4 id="left">Copyright &copy; - <?php echo "20".date('y');?></h4>
+            <h4 id="left">Copyright &copy; -
+                <?php echo "20".date('y');?>
+            </h4>
             <h4 id="right">BVCEC</h4>
         </footer>
     </body>

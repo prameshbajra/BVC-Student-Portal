@@ -2,26 +2,28 @@
 
 <!DOCTYPE html>
 <html lang="en">
-	<head>
 
-		<meta charset="UTF-8">
-		<title>Student Details Information.</title>
-		<link rel="shortcut icon" href="bvc.png" type="image/x-icon" />
-		<link rel="stylesheet" href="style_detailadmin.css">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Student Details Information.</title>
+    <link rel="shortcut icon" href="round.png" type="image/x-icon" />
+    <link rel="stylesheet" href="style_detailadmin.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="main.css">
     <script type="text/javascript" src="date_time.js"></script>
-	</head>
-	<body>
+</head>
+
+<body>
 
 
-	<div class="topDiv">
+    <div class="topDiv">
         <div class="imageLeft">
             <img src="round.png" />
         </div>
         <div id="asideCont">
             <h2>BVC Engineering College, Odalarevu</h2>
-            <h3>Affiliated To  JNTUK, Kakinada</h3> Accredited By NBA New Delhi and NAAC With 'A' Grade<br> Approved By AICTE, New Delhi<br> Established in 1997<br><br>
+            <h3>Affiliated To JNTUK, Kakinada</h3> Accredited By NBA New Delhi and NAAC With 'A' Grade<br> Approved By AICTE, New Delhi<br> Established in 1997<br><br>
         </div>
         <div class="imageRight">
             <span id="date_time"></span>
@@ -51,22 +53,22 @@
         <li><a href="#">Principal</a></li>
         <li><a href="#">Faculty</a>
             <ul class="submenu1">
-                <li><a href="#">CSE</a></li>
+                <li><a href="st_table.php">CSE</a></li>
                 <li><a href="#">CE</a></li>
                 <li><a href="#">ME</a></li>
                 <li><a href="#">EEE</a></li>
                 <li><a href="#">ECE</a></li>
             </ul>
         </li>
-
+        <li><a href="stlo.php">Students</a></li>
         <li><a href="#"> Departments</a>
             <ul class="submenu1">
                 <li><a href="Department.php">CSE</a></li>
-              
-                            <li><a href="civil.php">CE</a></li>
-                            <li><a href="mech.php">ME</a></li>
-                            <li><a href="eee.php">EEE</a></li>
-                            <li><a href="ece.php">ECE</a></li>
+
+                <li><a href="civil.php">CE</a></li>
+                <li><a href="mech.php">ME</a></li>
+                <li><a href="eee.php">EEE</a></li>
+                <li><a href="ece.php">ECE</a></li>
             </ul>
         </li>
         <li><a href="#">Accredition</a>
@@ -91,7 +93,7 @@
                         <li><a href="administration.php">Administration</a></li>
                         <li><a href="bvcnews.php">BVC News</a></li>
                         <li><a href="forthcoming.php">Forthcoming Event</a></li>
-                                <li><a href="emailnew.php">E-mail to students</a></li>
+                        <li><a href="emailnew.php">E-mail to students</a></li>
                         <li><a href="sms.php">SMS to Parents/Students</a></li>
                         <li><a href="proffesional.php">Professional Body</a></li>
                         <li><a href="project.php">Projects</a></li>
@@ -100,19 +102,20 @@
                         <li><a href="recuriment.php">Recruitment</a></li>
                         <li><a href="placements.php">Placement</a></li>
                         <li><a href="games.php">Games And Sports</a></li>
-                                <li><a href="feedback.php">Feedback to College</a></li>
+                        <li><a href="feedback.php">Feedback to College</a></li>
                         <li><a href="alumini.php">Alumini</a></li>
                         <li><a href="notice.php">Notices &amp; Circulars</a></li>
                     </ul>
                 </nav>
             </aside>
         </div>
-		<div id="bodyMain">
-			<?php
+        <div id="bodyMain">
+            <?php
 				include "functions.php";       // add more field...... it is remaining
 				details_admin();
 			?>
 
-		</div>
-	</body>
+        </div>
+</body>
+
 </html>

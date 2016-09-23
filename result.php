@@ -4,8 +4,37 @@
 <head>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="main.css">
-    <link rel="shortcut icon" href="round.png" type="image/x-icon" />
     <script type="text/javascript" src="date_time.js"></script>
+    <style>
+        #cust {
+            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 98%;
+        }
+        
+        #cust td,
+        #cust th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        
+        #cust tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        
+        #cust tr:hover {
+            background-color: #ddd;
+        }
+        
+        #cust th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: burlywood;
+            color: white;
+        }
+
+    </style>
 </head>
 
 <body>
@@ -15,7 +44,7 @@
         </div>
         <div id="asideCont">
             <h2>BVC Engineering College, Odalarevu</h2>
-            <h3>Affiliated To JNTUK, Kakinada</h3> Accredited By NBA New Delhi and NAAC With 'A' Grade<br> Approved By AICTE, New Delhi<br> Established in 1997
+            <h3>Affiliated To JNTUK, Kakinada</h3> Accredited By NBA New Delhi and NAAC With 'A' Grade<br> Approved By AICTE, New Delhi<br> Established in 1997<br><br>
 
         </div>
         <div class="imageRight">
@@ -28,8 +57,7 @@
         </div>
     </div>
     <div class="clear"></div>
-    <center>
-        <ul class="menu">
+    <ul class="menu">
         <li><a class="active" href="index.php">Home</a></li>
         <li><a href="contact.php">Contact</a></li>
         <li><a href="About.php">About Us</a></li>
@@ -75,9 +103,8 @@
         <li><a href="help.php">Help</a></li>
 
     </ul>
-    </center>
     <div class="bodyDiv">
-        <div class="forAside" style="margin-top:-0.5%;">
+        <div class="forAside" style="margin-top:-7px;">
             <aside id="buttonsAside">
                 <form class="navBar">
                     <nav id="navigationBar">
@@ -103,30 +130,70 @@
                 </form>
             </aside>
         </div>
-        <div class="container">
+        <center>
+            <div class="container">
+                <?php
+			         $con =mysqli_connect("localhost","root","");
+                    mysqli_select_db($con,"info");
+                    $flag=0;
+			         $count=0;
+                $result = mysqli_query($con,"SELECT * FROM backlogs ORDER BY sno");
+        		
 
-            <header>
-                <h1>Academics Of BVCEC</h1>
-            </header>
+                echo "<table id = 'cust'>
+		<tr>
+			<th> Regulation</th>
+			<th> Branch</th>
+			<th> Year</th>
+			<th> Sem</th>
+			<th> Registration Number</th>
+			<th> Subject</th>
+			<th> Internal Marks</th>
+            <th> External Marks</th>
+            <th> Total</th>
+            <th> Credits</th>
+		</tr>
+        <br>";
 
+        while($row = mysqli_fetch_array($result) )
+        {	
+              echo "<tr>
+              <td>" . $row['regulation'] . "</td>
+              <td>" . $row['branch'] . "</td>
+              <td>" . $row['year'] . "</td>
+              <td>" . $row['sem'] . "</td>
+              <td>" . $row['roll_no'] . "</td>
+              <td>" . $row['subject'] . "</td>
+              <td>" . $row['internal'] . "</td>
+              <td>".$row['external']."</td>
+              <td>" . $row['marks'] . "</td>
+              <td>" . $row['status'] . "</td>
+              </tr>";
+            if($flag==0)
+                echo $row['roll_no']." is having backlog in ";
+            if($row['status']==0)
+            {
+                echo $row['subject'].",<br>";
+                $count++;
+			}
+			$flag=1;
+		
+	   }
+                echo "<br>No. of backlogs=".$count;
+                echo "<br><br> Table Format<br>";
+        
+        
 
+      	echo "</table>";
+          
+        mysqli_close($con);
 
-            <article>
-
-                <h1>UG Course(B.Tech.)</h1>
-
-                <h4>
-                    Computer Science Engineering<br>Civil Engineering<br>Mechanical Engineering<br>Electronics and Electrical Engineering<br>Electrical and Communication Engineering<br>
-                </h4>
-                <br>
-                <h1>PG Course(M.Tech.)</h1>
-
-                <h4>
-                    CSE<br>SOFTWARE ENGINEERING<br>ECE<br>POWER ELECTRONICS<br>THERMAL ENGINEERING<br>EMBEDDED SYSTEMS<br> SOIL MECHANICS AND FOUNDATION ENGINEERING<br>ADAVANCED MANUFACTURING SYSTEMS
-                </h4>
-
-            </article>
-        </div>
+		?>
+            </div>
+        </center>
+        <br>
+        <br>
+        <br>
     </div>
     <footer id="footer">
         <h4 id="left">Copyright &copy;</h4>

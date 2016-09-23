@@ -64,14 +64,14 @@
                     <li><a href="principal.php">Principal</a></li>
                     <li><a href="#">Faculty</a>
                         <ul class="submenu1">
-                            <li><a href="#">CSE</a></li>
+                            <li><a href="st_table.php">CSE</a></li>
                             <li><a href="#">CE</a></li>
                             <li><a href="#">ME</a></li>
                             <li><a href="#">EEE</a></li>
                             <li><a href="#">ECE</a></li>
                         </ul>
                     </li>
-            
+                    <li><a href="stlo.php">Student</a></li>
                     <li><a href="#"> Departments</a>
                         <ul class="submenu1">
                             <li><a href="Department.php">CSE</a></li>
