@@ -725,7 +725,7 @@ function details_admin()
             }
             echo"</div>";
             echo "<div align=center>";
-            echo "<img src='uploads/".$row['roll_no'].".jpg' style = 'width:100px ;height :120px ;margin-left:340px;margin-top:-35px;position:absolute;'>";
+            echo "<a href='result.php?roll_no=".$row['roll_no']."'><img src='uploads/".$row['roll_no'].".jpg' style = 'width:100px ;height :120px ;margin-left:340px;margin-top:-35px;position:absolute;'></a>";
             echo "<table border='0' cellspacing='1px'><form class='form form--login' action='details_update.php' method='POST'<br>";
 
             echo "<br><br><tr><th> Roll Number</td><td><input class='loginName' type='text' class='form__input' name='roll_no'  value='".$row['roll_no'] ."'></td></tr>";

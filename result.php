@@ -10,6 +10,7 @@
             font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
             border-collapse: collapse;
             width: 98%;
+            margin-top:0px;
         }
         
         #cust td,
@@ -137,8 +138,10 @@
                     mysqli_select_db($con,"info");
                     $flag=0;
 			         $count=0;
-                $result = mysqli_query($con,"SELECT * FROM backlogs ORDER BY sno");
-        		
+                $result = mysqli_query($con,"SELECT * FROM backlogs ORDER BY year DESC");
+                $result3 = mysqli_query($con,"SELECT * FROM backlogs ORDER BY year DESC");
+                $result1 = mysqli_query($con,"SELECT * FROM profiles");
+        		$roll_no=$_REQUEST['roll_no'];
 
                 echo "<table id = 'cust'>
 		<tr>
@@ -157,6 +160,9 @@
 
         while($row = mysqli_fetch_array($result) )
         {	
+            if($roll_no==$row['roll_no'])
+            {
+                
               echo "<tr>
               <td>" . $row['regulation'] . "</td>
               <td>" . $row['branch'] . "</td>
@@ -169,22 +175,47 @@
               <td>" . $row['marks'] . "</td>
               <td>" . $row['status'] . "</td>
               </tr>";
-            if($flag==0)
-                echo $row['roll_no']." is having backlog in ";
+            if($flag==0){
+                while($rowl = mysqli_fetch_array($result1) )
+                 {
+                    if($roll_no==$rowl['roll_no'])
+                        echo $rowl['name'];
+                 }
+            }
+                
             if($row['status']==0)
             {
-                echo $row['subject'].",<br>";
                 $count++;
 			}
 			$flag=1;
 		
-	   }
+            }
+	       
+        }
+        
+      if($count==0)
+         {
+            echo " is having no backlogs ";
+         }
+         else
+        {   
+             echo " is having backlogs in:<br>";
+             while($rowx = mysqli_fetch_array($result3) )
+             {	 
+                 if($rowx['status']==0)
+                 {
+                     echo $rowx['subject'].",<br>";
+                 }
+             }
+         }
+                
                 echo "<br>No. of backlogs=".$count;
                 echo "<br><br> Table Format<br>";
         
         
 
       	echo "</table>";
+                echo "<a href='result2.php?roll_no=".$roll_no."'>next layout</a>";
           
         mysqli_close($con);
 
