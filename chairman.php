@@ -22,25 +22,23 @@
 ?>
 
     <body>
-        <div class="topDiv">
-            <div class="imageLeft">
-                <img src="round.png" />
-            </div>
-            <div id="asideCont">
-                <h1>बोनम वेंकटा चालामाया इंजीनियरिंग महाविध्यालय</h1>
-                <h2>Bonam Venkata Chalamayya Engineering College,<br> Odalarevu</h2>
-                <h3>Affiliated To JNTUK, Kakinada</h3> Accredited By NBA New Delhi and NAAC With 'A' Grade<br> Approved By AICTE, New Delhi<br> Established in 1997<br><br>
-
-            </div>
-            <div class="imageRight">
-                <span id="date_time"></span>
-                <script type="text/javascript">
-                    window.onload = date_time('date_time');
-
-                </script>
-                <img src="group.png" />
-            </div>
+            <div class="topDiv">
+        <div class="imageLeft">
+            <img src="round.png" />
         </div>
+        <div id="asideCont">
+            <h2>BVC Engineering College, Odalarevu</h2>
+            <h3>Affiliated To JNTUK, Kakinada</h3> Accredited By NBA New Delhi and NAAC With 'A' Grade<br> Approved By AICTE, New Delhi<br> Established in 1997<br><br>
+        </div>
+        <div class="imageRight">
+            <span id="date_time"></span>
+            <script type="text/javascript">
+                window.onload = date_time('date_time');
+
+            </script>
+            <img src="group.png" />
+        </div>
+    </div>
         <div class="clear"></div>
 
         <div id="main" role="main">

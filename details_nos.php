@@ -6,8 +6,8 @@
     <link rel="stylesheet" href="main.css">
     <link rel="shortcut icon" href="round.png" type="image/x-icon" />
     <script type="text/javascript" src="date_time.js"></script>
-	
-	
+
+
 </head>
 
 <body>
@@ -17,7 +17,7 @@
         </div>
         <div id="asideCont">
             <h2>BVC Engineering College, Odalarevu</h2>
-            <h3>Affiliated To  JNTUK, Kakinada</h3> Accredited By NBA New Delhi and NAAC With 'A' Grade<br> Approved By AICTE, New Delhi<br> Established in 1997<br><br>
+            <h3>Affiliated To JNTUK, Kakinada</h3> Accredited By NBA New Delhi and NAAC With 'A' Grade<br> Approved By AICTE, New Delhi<br> Established in 1997<br><br>
         </div>
         <div class="imageRight">
             <span id="date_time"></span>
@@ -107,17 +107,17 @@
             </header>
             <article>
 
-    <div id="bodyMain">
-        <br>
-        <br>
-<h2>
-        <?php
+                <div id="bodyMain">
+                    <br>
+                    <br>
+                    <h2>
+                        <?php
 			include "funcst.php";
 			nondetails_admin();
 
         ?>
-</h2>
-    </div>
+                    </h2>
+                </div>
         </div>
     </div>
 </body>

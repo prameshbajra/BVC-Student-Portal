@@ -52,7 +52,7 @@
                 <li><a href="#">ECE</a></li>
             </ul>
         </li>
-        <li><a href="stlo.php">Student</a></li>
+        <li><a href="stlo.php">Students</a></li>
 
             <li><a href="#"> Departments</a>
                 <ul class="submenu1">

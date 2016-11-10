@@ -14,12 +14,12 @@ function date_time(id) {
     if (m < 10) {
         m = "0" + m;
     }
-    s = date.getSeconds();
+
+    /*s = date.getSeconds();
     if (s < 10) {
-        s = "0" + s;
-    }
-    result = '' + days[day] + ' ' + ', ' + months[month] + ' ' + d + ' ' + year + ' ' + h + ':' + m + ':' + s;
+       s = "0" + s;
+    }*/
+    result = '' + days[day] + ' ' + ', ' + months[month] + ' ' + d + ' ' + year + ' ' + h + ':' + m;
     document.getElementById(id).innerHTML = result;
     setTimeout('date_time("' + id + '");', '1000');
-    return true;
 }

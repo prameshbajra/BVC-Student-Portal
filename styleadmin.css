@@ -14,7 +14,7 @@ html {
     height: 100%;
 }
 
-body{ 
+body {
     background: url(background.png) no-repeat center center fixed;
     -webkit-background-size: cover;
     /* For WebKit*/
@@ -78,7 +78,7 @@ input {
     background-color: #ea4c88;
 }
 
-#topHead> h2 {
+#topHead>h2 {
     margin-left: 20px;
 }
 
@@ -249,7 +249,7 @@ td {
 
 #importExcel {
     display: inline-block;
-    width:45%;
+    width: 45%;
     margin: 40px 0 0 0;
 }
 

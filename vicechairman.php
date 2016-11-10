@@ -28,19 +28,16 @@
                 <img src="round.png" />
             </div>
             <div id="asideCont">
-                <h1>बोनम वेंकटा चालामाया इंजीनियरिंग महाविध्यालय
-                </h1>
-                <h2>Bonam Venkata Chalamayya Engineering College,<br> Odalarevu</h2>
+                <h2>BVC Engineering College, Odalarevu</h2>
                 <h3>Affiliated To JNTUK, Kakinada</h3> Accredited By NBA New Delhi and NAAC With 'A' Grade<br> Approved By AICTE, New Delhi<br> Established in 1997<br><br>
-
             </div>
             <div class="imageRight">
-                <img src="group.png" /><br><br>
                 <span id="date_time"></span>
                 <script type="text/javascript">
                     window.onload = date_time('date_time');
 
                 </script>
+                <img src="group.png" />
             </div>
         </div>
         <div class="clear"></div>
@@ -72,7 +69,7 @@
                             <li><a href="#">ECE</a></li>
                         </ul>
                     </li>
-                    <li><a href="stlo.php">Student</a></li>
+                    <li><a href="stlo.php">Students</a></li>
                     <li><a href="#"> Departments</a>
                         <ul class="submenu1">
                             <li><a href="Department.php">CSE</a></li>

@@ -52,7 +52,7 @@
                     <li><a href="contact.php">Contact</a></li>
                     <li><a href="About.php">About Us</a></li>
                     <li><a href="vision.php">Vision &amp; Mission</a></li>
-                    <li><a href="asd.php">Management</a>
+                    <li><a href="#">Management</a>
                         <ul class="submenu">
                             <li><a href="founderchairman.php">Founder-Chairman</a></li>
                             <li><a href="secretary.php">Secretary</a></li>
