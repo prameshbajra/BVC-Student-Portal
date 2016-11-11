@@ -30,51 +30,51 @@
     <div class="clear"></div>
     <center>
         <ul class="menu">
-        <li><a class="active" href="index.php">Home</a></li>
-        <li><a href="contact.php">Contact</a></li>
-        <li><a href="About.php">About Us</a></li>
-        <li><a href="vision.php">Vision &amp; Mission</a></li>
-        <li><a href="#">Management</a>
+            <li><a class="active" href="index.php">Home</a></li>
+            <li><a href="contact.php">Contact</a></li>
+            <li><a href="About.php">About Us</a></li>
+            <li><a href="vision.php">Vision &amp; Mission</a></li>
+            <li><a href="#">Management</a>
 
-            <ul class="submenu">
-                <li><a href="founderchairman.php">Founder-Chairman</a></li>
-                <li><a href="secretary.php">Secretary</a></li>
-                <li><a href="chairman.php">Chairman</a></li>
-                <li><a href="vicechairman.php">Vice-Chairman</a></li>
+                <ul class="submenu">
+                    <li><a href="founderchairman.php">Founder-Chairman</a></li>
+                    <li><a href="secretary.php">Secretary</a></li>
+                    <li><a href="chairman.php">Chairman</a></li>
+                    <li><a href="vicechairman.php">Vice-Chairman</a></li>
 
-            </ul>
-        </li>
-        <li><a href="principal.php">Principal</a></li>
-        <li><a href="#">Faculty</a>
-            <ul class="submenu1">
-                <li><a href="st_table.php">CSE</a></li>
-                <li><a href="#">CE</a></li>
-                <li><a href="#">ME</a></li>
-                <li><a href="#">EEE</a></li>
-                <li><a href="#">ECE</a></li>
-            </ul>
-        </li>
-        <li><a href="stlo.php">Students</a></li>
-        <li><a href="#"> Departments</a>
-            <ul class="submenu1">
-                <li><a href="Department.php">CSE</a></li>
+                </ul>
+            </li>
+            <li><a href="principal.php">Principal</a></li>
+            <li><a href="#">Faculty</a>
+                <ul class="submenu1">
+                    <li><a href="st_table.php">CSE</a></li>
+                    <li><a href="#">CE</a></li>
+                    <li><a href="#">ME</a></li>
+                    <li><a href="#">EEE</a></li>
+                    <li><a href="#">ECE</a></li>
+                </ul>
+            </li>
+            <li><a href="stlo.php">Students</a></li>
+            <li><a href="#"> Departments</a>
+                <ul class="submenu1">
+                    <li><a href="Department.php">CSE</a></li>
 
-                <li><a href="civil.php">CE</a></li>
-                <li><a href="mech.php">ME</a></li>
-                <li><a href="eee.php">EEE</a></li>
-                <li><a href="ece.php">ECE</a></li>
-            </ul>
-        </li>
-        <li><a href="#">Accredition</a>
-            <ul class="submenu1">
-                <li><a href="naac.php">NAAC</a></li>
-                <li><a href="nba.php">NBA</a></li>
-                <li><a href="pio.php">PIO</a></li>
-            </ul>
-        </li>
-        <li><a href="help.php">Help</a></li>
+                    <li><a href="civil.php">CE</a></li>
+                    <li><a href="mech.php">ME</a></li>
+                    <li><a href="eee.php">EEE</a></li>
+                    <li><a href="ece.php">ECE</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Accredition</a>
+                <ul class="submenu1">
+                    <li><a href="naac.php">NAAC</a></li>
+                    <li><a href="nba.php">NBA</a></li>
+                    <li><a href="pio.php">PIO</a></li>
+                </ul>
+            </li>
+            <li><a href="help.php">Help</a></li>
 
-    </ul>
+        </ul>
     </center>
     <div class="bodyDiv">
         <div class="forAside" style="margin-top:-0.5%;">

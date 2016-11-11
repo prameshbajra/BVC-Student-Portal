@@ -5,7 +5,6 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
     <title>Login</title>
     <script src="script.js"></script>
@@ -13,8 +12,6 @@
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="styleIndex.css">
     <script type="text/javascript" src="date_time.js"></script>
-
-
 </head>
 
 <body>
@@ -177,7 +174,7 @@
                 <h2 align="center">
                     <u style="color: blue">Flash News</u>
                 </h2>
-                <marquee behavior="scroll" scrollamount="5" direction="left" onmouseover="this.setAttribute('scrollamount',0);" onmouseout="this.setAttribute('scrollamount',5);">
+                <marquee behavior="scroll" scrollamount="5" direction="left" onmouseover="this.stop();" onmouseout="this.start();">
 
                     <?php
                             $servername = "localhost";
