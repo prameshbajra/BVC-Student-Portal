@@ -268,7 +268,7 @@ nav ul li {
     width: 50%;
     float: left;
     text-align: center;
-	margin:0 2% 0 2%;
+    margin: 0 2% 0 2%;
 }
 
 .loginForm {
@@ -320,7 +320,7 @@ nav ul li {
 #bottom_part {
     float: left;
     position: absolute;
-	margin: 200px 0 0 500px;
+    margin: 200px 0 0 500px;
 }
 
 #bottom_part h2 {
@@ -369,10 +369,11 @@ nav ul li {
     float: right;
     margin-right: 4%;
 }
-#submitButton{
-    width:80px;
+
+#submitButton {
+    width: 80px;
     height: 40px;
-    border-radius:20px;
+    border-radius: 20px;
     color: black;
-    background-color:burlywood;
+    background-color: burlywood;
 }
