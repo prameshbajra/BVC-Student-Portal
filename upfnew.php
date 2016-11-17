@@ -81,7 +81,6 @@
                         <li><a href="administration.php">Administration</a></li>
                         <li><a href="bvcnews.php">BVC News</a></li>
                         <li><a href="forthcoming.php">Forthcoming Event</a></li>
-                        <li><a href="emailnew.php">E-mail to students</a></li>
                         <li><a href="sms.php">SMS to Parents/Students</a></li>
                         <li><a href="proffesional.php">Professional Body</a></li>
                         <li><a href="project.php">Projects</a></li>

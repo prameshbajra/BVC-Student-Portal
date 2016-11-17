@@ -8,6 +8,7 @@
 #####
 #####           The project can be found in github.com.
 #####                                    https://github.com/Suzal3579/Student-Information-Sheet
+#####                                    https://github.com/Saurya3579/Student-Information-Sheet
 #####
 #####           Any further code changes, commits, edits, fixes and improvements can be seen in the very page.
 #####

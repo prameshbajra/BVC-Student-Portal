@@ -12,6 +12,9 @@
     <link rel="stylesheet" href="main.css">
     <script type="text/javascript" src="date_time.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 </head>
 
@@ -81,9 +84,9 @@
                 </form>
 
                 <?php
-						include "functions.php";
-                            import();
-	            	?>
+                    include "functions.php";
+                    import();
+	             ?>
                     <div id="clear"></div>
             </div>
         </div>

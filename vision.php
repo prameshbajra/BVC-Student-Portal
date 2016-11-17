@@ -14,7 +14,7 @@
         </div>
         <div id="asideCont">
             <h2>BVC Engineering College, Odalarevu</h2>
-            <h3>Affiliated To  JNTUK, Kakinada</h3> Accredited By NBA New Delhi and NAAC With 'A' Grade<br> Approved By AICTE, New Delhi<br> Established in 1997<br><br>
+            <h3>Affiliated To JNTUK, Kakinada</h3> Accredited By NBA New Delhi and NAAC With 'A' Grade<br> Approved By AICTE, New Delhi<br> Established in 1997<br><br>
         </div>
         <div class="imageRight">
             <span id="date_time"></span>
@@ -82,7 +82,6 @@
                             <li><a href="administration.php">Administration</a></li>
                             <li><a href="bvcnews.php">BVC News</a></li>
                             <li><a href="forthcoming.php">Forthcoming Event</a></li>
-                            <li><a href="emailnew.php">E-mail to students</a></li>
                             <li><a href="sms.php">SMS to Parents/Students</a></li>
                             <li><a href="recuriment.php">Recruitment</a></li>
                             <li><a href="proffesional.php">Professional Body</a></li>
@@ -133,7 +132,9 @@
 
     </div>
     <footer id="footer">
-        <h4 id="left">Copyright &copy; - <?php echo "20".date('y');?></h4>
+        <h4 id="left">Copyright &copy; -
+            <?php echo "20".date('y');?>
+        </h4>
         <h4 id="right">BVCEC</h4>
     </footer>
 </body>

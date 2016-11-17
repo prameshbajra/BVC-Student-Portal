@@ -1,6 +1,5 @@
 <!-- Developed by Saurav Bajracharya and Pramesh Bajracharya -->
 
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,6 +11,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="animate.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
     <script type="text/javascript" src="date_time.js"></script>
 
 </head>
@@ -31,9 +31,6 @@
                 </h1>
                 <h2>Bonam Venkata Chalamayya Engineering College,<br> Odalarevu</h2>
                 <h3>Affiliated To JNTUK, Kakinada</h3> Accredited By NBA New Delhi and NAAC With 'A' Grade<br> Approved By AICTE, New Delhi<br> Established in 1997<br><br>
-                <?php
-                echo "Today's Date : ".date("Y/m/d")." And Time ".date("h:i")."<br><br>";
-            ?>
             </div>
             <div class="imageRight">
                 <span id="date_time"></span>
@@ -104,7 +101,6 @@
                                         <li><a href="administration.php">Administration</a></li>
                                         <li><a href="bvcnews.php">BVC News</a></li>
                                         <li><a href="forthcoming.php">Forthcoming Event</a></li>
-                                        <li><a href="emailnew.php">E-mail to students</a></li>
                                         <li><a href="sms.php">SMS to Parents/Students</a></li>
                                         <li><a href="recuriment.php">Recruitment</a></li>
                                         <li><a href="proffesional.php">Professional Body</a></li>
@@ -120,9 +116,14 @@
                                 </nav>
                             </form>
                         </aside>
-                    </div>
+                    </div><br><br><br><br>
                     <div class="centralDiv">
-
+                        <div class="panel panel-danger">
+                            <div class="panel-heading">SMS feature not working!</div>
+                            <div class="panel-body">
+                                We are sorry for the trouble. Due to some security reason we are unable to provide SMS services. We are working on it and will soon be fixed. Please be patient. <br>Thank You!
+                            </div>
+                        </div>
                     </div>
                 </div>
             </center>

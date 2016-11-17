@@ -13,19 +13,10 @@
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
-    <script type="text/javascript">
-        window.onbeforeunload = function() {
-            alert("Dude, are you sure you want to leave? Think of the kittens!");
-        }
-
-    </script>
 </head>
 
 <body>
-    <?php
-        session_start();
-    ?>
-        <div class="topDiv">
+          <div class="topDiv">
             <div class="imageLeft">
                 <img src="round.png" />
             </div>
@@ -96,7 +87,6 @@
                             <li><a href="administration.php">Administration</a></li>
                             <li><a href="bvcnews.php">BVC News</a></li>
                             <li><a href="forthcoming.php">Forthcoming Event</a></li>
-                            <li><a href="emailnew.php">E-mail to students</a></li>
                             <li><a href="sms.php">SMS to Parents/Students</a></li>
                             <li><a href="proffesional.php">Professional Body</a></li>
                             <li><a href="project.php">Projects</a></li>
@@ -117,10 +107,9 @@
                 <br>
                 <form action="registrationPage.php" method="POST" class="form form--login">
                     <?php
-            include "functions.php";
-            details();
-            session_destroy();    
-        ?>
+                        include "functions.php";
+                        details();  
+                    ?>
                 </form>
             </div>
         </div>
