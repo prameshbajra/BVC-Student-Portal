@@ -15,10 +15,7 @@
         </div>
         <div id="asideCont">
             <h2>BVC Engineering College, Odalarevu</h2>
-            <h3>Affiliated To  JNTUK, Kakinada</h3> Accredited By NBA New Delhi and NAAC With 'A' Grade<br> Approved By AICTE, New Delhi<br> Established in 1997<br><br>
-            <?php
-                echo "Today's Date : ".date("Y/m/d")." And Time ".date("h:i")."<br><br>";
-            ?>
+            <h3>Affiliated To JNTUK, Kakinada</h3> Accredited By NBA New Delhi and NAAC With 'A' Grade<br> Approved By AICTE, New Delhi<br> Established in 1997<br><br>
         </div>
         <div class="imageRight">
             <span id="date_time"></span>
@@ -60,10 +57,10 @@
         <li><a href="#"> Departments</a>
             <ul class="submenu1">
                 <li><a href="Department.php">CSE</a></li>
-                            <li><a href="civil.php">CE</a></li>
-                            <li><a href="mech.php">ME</a></li>
-                            <li><a href="eee.php">EEE</a></li>
-                            <li><a href="ece.php">ECE</a></li>
+                <li><a href="civil.php">CE</a></li>
+                <li><a href="mech.php">ME</a></li>
+                <li><a href="eee.php">EEE</a></li>
+                <li><a href="ece.php">ECE</a></li>
             </ul>
         </li>
         <li><a href="#">Accredition</a>
@@ -94,7 +91,7 @@
                             <li><a href="training.php">Training</a></li>
                             <li><a href="games.php">Games And Sports</a></li>
                             <li><a href="placements.php">Placement</a></li>
-                                <li><a href="feedback.php">Feedback to College</a></li>
+                            <li><a href="feedback.php">Feedback to College</a></li>
                             <li><a href="alumini.php">Alumini</a></li>
                             <li><a href="notice.php">Notices &amp; Circulars</a></li>
                         </ul>
@@ -122,7 +119,9 @@
         </center>
     </div>
     <footer id="footer">
-        <h4 id="left">Copyright &copy; - <?php echo "20".date('y');?></h4>
+        <h4 id="left">Copyright &copy; -
+            <?php echo "20".date('y');?>
+        </h4>
         <h4 id="right">BVCEC</h4>
     </footer>
 </body>

@@ -56,36 +56,36 @@
 <div class="centralDiv" style="margin-left:5%;">
     <?php 
                         
-                        include('includes/config.php');
+        include('includes/config.php');
 
-                        if(isset($_POST['check']) == true)
-                        {
+        if(isset($_POST['check']) == true)
+        {
 
-                            $subject = trim($_POST['subject']);
-                            $message = trim($_POST['message']);
-                            $from = 'pe.messh@gmail.com';
-                            $reply = 'pe.messh@gmail.com';
+            $subject = trim($_POST['subject']);
+            $message = trim($_POST['message']);
+            $from = 'pe.messh@gmail.com';
+            $reply = 'pe.messh@gmail.com';
 
-                            foreach($_POST['check'] as $key => $value)
-                            {
-                                // Set content-type for sending HTML email
-                                $headers = "BVC Engineering College" . "\r\n";
-                                $headers .= "Odalarevu, Amalapuram" . "\r\n";
-                                $headers .= "From: <".$from.">\r\n";
-                                $headers .= "Reply-To: ".$reply."";
-                                if(@mail($value,$subject,$message,$headers))
-                                {
-                                    echo '<div class="container-fluid" style="width:130%;">
-                                          <div class="alert alert-success fade in">
-                                          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>';
-                                    echo '<strong>Success! </strong>';
-                                    echo ' Mail has been Successfully sent to '.$value.'</br>';
-                                    echo '</div></div>';
-                                }
-                            }
-                        }
+            foreach($_POST['check'] as $key => $value)
+            {
+                // Set content-type for sending HTML email
+                $headers = "BVC Engineering College" . "\r\n";
+                $headers .= "Odalarevu, Amalapuram" . "\r\n";
+                $headers .= "From: <".$from.">\r\n";
+                $headers .= "Reply-To: ".$reply."";
+                if(@mail($value,$subject,$message,$headers))
+                {
+                    echo '<div class="container-fluid" style="width:130%;">
+                          <div class="alert alert-success fade in">
+                          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>';
+                    echo '<strong>Success! </strong>';
+                    echo ' Mail has been Successfully sent to '.$value.'</br>';
+                    echo '</div></div>';
+                }
+            }
+        }
 
-                        ?>
+    ?>
     <div class="container-fluid" style="width:130%;margin-left:25%;">
         <center>
             <p>

@@ -13,6 +13,23 @@
     <link rel="stylesheet" href="styleIndex.css">
     <script type="text/javascript" src="date_time.js"></script>
 </head>
+<!--Live chat starts here (Admin And User)...
+
+<script type="text/javascript">
+    var Tawk_API = Tawk_API || {},
+        Tawk_LoadStart = new Date();
+    (function() {
+        var s1 = document.createElement("script"),
+            s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = 'https://embed.tawk.to/582edeaa7bb7bf7f5218b02a/default';
+        s1.charset = 'UTF-8';
+        s1.setAttribute('crossorigin', '*');
+        s0.parentNode.insertBefore(s1, s0);
+    })();
+</script>
+
+-->
 
 <body>
     <div class="topDiv">
@@ -168,10 +185,10 @@
                 </div>
             </div>
         </div>
-        <div id="bottom_part" style="border:3px solid gray;margin:80px 0 0 990px;width:25%;height:500px;">
+        <div id="bottom_part" style="border:3px solid gray;margin:80px 0 0 990px;width:25%;height:300px;">
             <p class="newFooter">
                 <h2 align="center">
-                    <u style="color: blue">Flash News</u>
+                    <u style="color: black;">Flash News</u>
                 </h2>
                 <marquee behavior="scroll" scrollamount="5" direction="left" onmouseover="this.stop();" onmouseout="this.start();">
 

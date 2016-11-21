@@ -7,7 +7,6 @@
     <meta charset="UTF-8">
     <title>Student Detail Information.</title>
     <link rel="shortcut icon" href="bvc.png" type="image/x-icon" />
-    <link rel="stylesheet" href="styleReg.css">
     <link rel="stylesheet" href="animate.css">
 
 </head>

@@ -301,8 +301,8 @@ function details()
     $uname=strtoupper($_POST['uname']);
     $pwd=strtoupper($_POST['pwd']);
     $result = mysqli_query($con,"SELECT * FROM profiles");
-     date_default_timezone_set('Asia/Calcutta');
-     $today=date('m-d');
+    date_default_timezone_set('Asia/Calcutta');
+    $today=date('m-d');
     
     while($row = mysqli_fetch_array($result))
     {
