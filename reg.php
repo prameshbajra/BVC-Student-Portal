@@ -3,7 +3,7 @@
 <title>Alumini REGISTERATION FORM</title>
 <marquee>
     <p>
-        <h1 style="color: #2980b9"><strong>Welcome To Alumini REGISTERATION FORM</strong></h1>
+        <h1 style=""><strong>Welcome To Alumini REGISTERATION FORM</strong></h1>
     </p>
 </marquee>
 <style>
@@ -25,14 +25,6 @@
     }
 
 </style>
-
-<body>
-
-
-</body>
-
-</html>
-</div>
 <form action="in.php" method="post" enctype="multipart/form-data">
 
     <table align="right">
