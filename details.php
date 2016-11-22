@@ -1,22 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+    session_start();
+?>
+    <!DOCTYPE html>
+    <html lang="en">
 
-<head>
+    <head>
 
-    <meta charset="UTF-8">
-    <title>Student Details Information.</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="styleDetails.css">
-    <link rel="stylesheet" href="animate.css">
-    <link rel="shortcut icon" href="round.png" type="image/x-icon" />
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-    <meta http-equiv="Pragma" content="no-cache" />
-    <meta http-equiv="Expires" content="0" />
-</head>
+        <meta charset="UTF-8">
+        <title>Student Details Information.</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="styleDetails.css">
+        <link rel="stylesheet" href="animate.css">
+        <link rel="shortcut icon" href="round.png" type="image/x-icon" />
+        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+        <meta http-equiv="Pragma" content="no-cache" />
+        <meta http-equiv="Expires" content="0" />
+    </head>
 
-<body>
-          <div class="topDiv">
+    <body>
+        <div class="topDiv">
             <div class="imageLeft">
                 <img src="round.png" />
             </div>
@@ -109,11 +112,12 @@
                     <?php
                         include "functions.php";
                         details();  
+                        session_destroy();
                     ?>
                 </form>
             </div>
         </div>
 
-</body>
+    </body>
 
-</html>
+    </html>
