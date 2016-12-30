@@ -1,5 +1,5 @@
 <?php
-mysql_connect("localhost","root","") or die ("mysql connection failed");
+mysql_connect("localhost","id435190_bvcecweb99999999","") or die ("mysql connection failed");
 mysql_select_db("ex") or die ("database selection failed"); 
 
 
@@ -24,7 +24,7 @@ saveimage($name,$image);
 }
 function saveimage($name,$image)
 {
-$con=mysql_connect("localhost","root","");
+$con=mysql_connect("localhost","id435190_bvcecweb99999999","bvcecweb99999999");
 mysql_select_db("ex",$con);
 if($result)
 {

@@ -107,7 +107,7 @@ class iFlyChat
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         $result = curl_exec($ch);
-        $res_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+        $res_code = curl_getid435190_info($ch, CURLINFO_HTTP_CODE);
         $result = json_decode($result);
         $result->code = $res_code;
         curl_close($ch);

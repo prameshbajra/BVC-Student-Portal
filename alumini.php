@@ -159,7 +159,7 @@ $username=$_POST['username'];
 $password=$_POST['password'];
 if(isset($_POST['commit'])){
 	
-	mysql_connect("localhost","root","bvcecskrv");
+	mysql_connect("localhost","id435190_bvcecweb99999999","bvcecskrv");
 	mysql_select_db("ex");
 	$query=mysql_query("select * from al");
 	while($row=mysql_fetch_array($query)){

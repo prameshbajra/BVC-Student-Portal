@@ -109,10 +109,10 @@
                     <div class="centralDiv">
 			
 <?PHP
-	$con = mysql_connect("localhost","root","");
-    $create = "CREATE DATABASE info";
+	$con = mysql_connect("localhost","id435190_bvcecweb99999999","bvcecweb99999999");
+    $create = "CREATE DATABASE id435190_info";
     $create_db = mysql_query($create);
-    $db_name = "info";
+    $db_name = "id435190_info";
     $select = mysql_select_db($db_name,$con);
     $create_table1 = "CREATE TABLE forum
                     (feild1 text,
@@ -123,8 +123,8 @@
 	?>
 			
 	<?php
-$con =mysqli_connect("localhost","root","");
-mysqli_select_db($con,"info");
+$con =mysqli_connect("localhost","id435190_bvcecweb99999999","bvcecweb99999999");
+mysqli_select_db($con,"id435190_info");
 	$feild1=$_POST['feild1'];
 	$name=$_POST['name'];
 	$sql="INSERT INTO forum(
@@ -137,8 +137,8 @@ mysqli_select_db($con,"info");
 				
 						
 <?php
-	$con =mysqli_connect("localhost","root","");
-    mysqli_select_db($con,"info");
+	$con =mysqli_connect("localhost","id435190_bvcecweb99999999","bvcecweb99999999");
+    mysqli_select_db($con,"id435190_info");
     $result = mysqli_query($con,"SELECT * FROM forum");
 	echo "<table border=2>";
     while($row = mysqli_fetch_array($result))

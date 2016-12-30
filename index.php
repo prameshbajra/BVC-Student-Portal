@@ -194,9 +194,9 @@
 
                     <?php
                             $servername = "localhost";
-                            $username = "root";
+                            $username = "id435190_bvcecweb99999999";
                             $password = "";
-                            $dbname = "info";
+                            $dbname = "id435190_info";
 
                             // Create connection
                             $conn = new mysqli($servername, $username, $password, $dbname);
@@ -423,7 +423,7 @@
                 slideIndex = 1
             }
             for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
+                dots[i].className = dots[i].className.replace(" active", "bvcecweb99999999");
             }
             slides[slideIndex - 1].style.display = "block";
             dots[slideIndex - 1].className += " active";

@@ -15,7 +15,7 @@
 		$message = $_POST['message'];
 		$emailRegd = "pe.messh@gmail.com";
 		$from = "FROM: bvcec@org ";    // Additional details here if needed ...
-		// $selectQuery = "Select email FROM info WHERE roll_no = $emailRegd";
+		// $selectQuery = "Select email FROM id435190_info WHERE roll_no = $emailRegd";
 		// mail($selectQuery,$subject,$message,$from) or die("There 1".mysql_error());
 		mail($emailRegd,$subject,$message,$from) or die("Here 2".mysql_error());
 	}

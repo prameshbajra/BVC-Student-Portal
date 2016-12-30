@@ -42,94 +42,94 @@
 
 // Creation of databaase , select DATABASE...
 
-function create()
-{
-	$con = mysql_connect("localhost","root","");
-    $create = "CREATE DATABASE info";
-    $create_db = mysql_query($create);
-    $db_name = "info";
-    $select = mysql_select_db($db_name,$con);
-    $create_table1 = "CREATE TABLE faculty
-                    (name char(50),
-                    dob date,
-                    sex text(10),
-                    father_name char(50),
-                    address text(90),
-                    email char(40),
-                    mobile bigint(16),
-                    aadhaar_id bigint(20),
-                    uname varchar(30),
-                    pwd varchar(30),
-                    nationality text(30),
-                    caste text(30),
-                    qualifications text,
-                    specialization text,
-                    
-                    members text,
-					hobbies text
-                    );";
-    $create_table = "CREATE TABLE profiles
-                    (roll_no varchar(10) PRIMARY KEY ,
-                    name char(50),
-                    dob date,
-                    sex text(10),
-                    father_name char(50),
-                    address text(90),
-                    email char(40),
-                    mobile bigint(16),
-                    aadhaar_id bigint(20),
-                    father_mobile bigint(16),
-                    uname varchar(30),
-                    pwd varchar(30),
-                    nationality text(30),
-                    caste text(30),
-                    th10 float,
-                    sc2 float,
-                    diploma float,
-                    one_1 float,
-                    two_1 float,
-                    three_1 float,
-                    four_1 float,
-                    one_2 float,
-                    two_2 float,
-                    three_2 float,
-                    four_2 float,
-                    aggregate float,
-                    attendance float,
-                    members text,
-					hobbies text,
-                    academics1 text,
-                    curricular1 text,
-                    co_curricular1 text,
-                    extra_curricular1 text,
-                    others1 text,
-                    academics2 text,
-                    curricular2 text,
-                    co_curricular2 text,
-                    extra_curricular2 text,
-                    others2 text,
-                    academics3 text,
-                    curricular3 text,
-                    co_curricular3 text,
-                    extra_curricular3 text,
-                    others3 text,
-                    academics4 text,
-                    curricular4 text,
-                    co_curricular4 text,
-                    extra_curricular4 text,
-                    others4 text
-                    );";
-    $table = mysql_query($create_table);
-    $table1 = mysql_query($create_table1);
-    mysql_close($con);
-}
+//function create()
+//{
+//	$con = mysql_connect("localhost","id435190_bvcecweb99999999","bvcecweb99999999");
+//    $create = "CREATE DATABASE id435190_info";
+//    $create_db = mysql_query($create);
+//    $db_name = "id435190_info";
+//    $select = mysql_select_db($db_name,$con);
+//    $create_table1 = "CREATE TABLE faculty
+//                    (name char(50),
+//                    dob date,
+//                    sex text(10),
+//                    father_name char(50),
+//                    address text(90),
+//                    email char(40),
+//                    mobile bigint(16),
+//                    aadhaar_id bigint(20),
+//                    uname varchar(30),
+//                    pwd varchar(30),
+//                    nationality text(30),
+//                    caste text(30),
+//                    qualifications text,
+//                    specialization text,
+//                    
+//                    members text,
+//					hobbies text
+//                    );";
+//    $create_table = "CREATE TABLE profiles
+//                    (roll_no varchar(10) PRIMARY KEY ,
+//                    name char(50),
+//                    dob date,
+//                    sex text(10),
+//                    father_name char(50),
+//                    address text(90),
+//                    email char(40),
+//                    mobile bigint(16),
+//                    aadhaar_id bigint(20),
+//                    father_mobile bigint(16),
+//                    uname varchar(30),
+//                    pwd varchar(30),
+//                    nationality text(30),
+//                    caste text(30),
+//                    th10 float,
+//                    sc2 float,
+//                    diploma float,
+//                    one_1 float,
+//                    two_1 float,
+//                    three_1 float,
+//                    four_1 float,
+//                    one_2 float,
+//                    two_2 float,
+//                    three_2 float,
+//                    four_2 float,
+//                    aggregate float,
+//                    attendance float,
+//                    members text,
+//					hobbies text,
+//                    academics1 text,
+//                    curricular1 text,
+//                    co_curricular1 text,
+//                    extra_curricular1 text,
+//                    others1 text,
+//                    academics2 text,
+//                    curricular2 text,
+//                    co_curricular2 text,
+//                    extra_curricular2 text,
+//                    others2 text,
+//                    academics3 text,
+//                    curricular3 text,
+//                    co_curricular3 text,
+//                    extra_curricular3 text,
+//                    others3 text,
+//                    academics4 text,
+//                    curricular4 text,
+//                    co_curricular4 text,
+//                    extra_curricular4 text,
+//                    others4 text
+//                    );";
+//    $table = mysql_query($create_table);
+//    $table1 = mysql_query($create_table1);
+//    mysql_close($con);
+//}
 
 //Insertion in database....
 
 function insert()
 {
-    $con =mysqli_connect("localhost","root","");
-    mysqli_select_db($con,"info");
+    $con =mysqli_connect("localhost","id435190_bvcecweb99999999","bvcecweb99999999");
+    mysqli_select_db($con,"id435190_info");
 
     if(isset($_POST['submit']))
     {
@@ -294,8 +294,8 @@ function insert()
 
 function details()
 {
-	$con =mysqli_connect("localhost","root","");
-    mysqli_select_db($con,"info");
+	$con =mysqli_connect("localhost","id435190_bvcecweb99999999","bvcecweb99999999");
+    mysqli_select_db($con,"id435190_info");
     $flag=0;
 	$temp=0;
     $uname=strtoupper($_POST['uname']);
@@ -424,8 +424,8 @@ function details()
 
 function import()                                         // Function made for excel import only...
 {
-    $conn = mysql_connect("localhost","root","");
-    mysql_select_db("info",$conn);
+    $conn = mysql_connect("localhost","id435190_bvcecweb99999999","bvcecweb99999999");
+    mysql_select_db("id435190_info",$conn);
     if(isset($_POST["submit"]))
     {
         $file = $_FILES['file']['tmp_name'];
@@ -604,8 +604,8 @@ function import()                                         // Function made for e
 }
 function import2()
 {
-    $conn = mysql_connect("localhost","root","");
-    mysql_select_db("info",$conn);
+    $conn = mysql_connect("localhost","id435190_bvcecweb99999999","bvcecweb99999999");
+    mysql_select_db("id435190_info",$conn);
     if(isset($_POST["submit"]))
     {
         $file = $_FILES['file']['tmp_name'];
@@ -667,12 +667,12 @@ function import2()
     }
 }
 
-// Base overview of a table to admin ... some info present ...
+// Base overview of a table to admin ... some id435190_info present ...
 
 function stu_table()
 {
-        $con =mysqli_connect("localhost","root","");
-        mysqli_select_db($con,"info");
+        $con =mysqli_connect("localhost","id435190_bvcecweb99999999","bvcecweb99999999");
+        mysqli_select_db($con,"id435190_info");
         $flag=0;
         $result = mysqli_query($con,"SELECT * FROM profiles ORDER BY roll_no");
         echo "<table id = 'cust'>
@@ -703,8 +703,8 @@ function stu_table()
 
 function details_admin()
 {
-    $con =mysqli_connect("localhost","root","");
-    mysqli_select_db($con,"info");
+    $con =mysqli_connect("localhost","id435190_bvcecweb99999999","bvcecweb99999999");
+    mysqli_select_db($con,"id435190_info");
     $flag=0;
     $roll_no=$_REQUEST['roll_no'];
     $result = mysqli_query($con,"SELECT * FROM profiles");
@@ -810,8 +810,8 @@ echo"</div>";
 
 function admin_update()
 {
-	$con =mysqli_connect("localhost","root","");
-    mysqli_select_db($con,"info");
+	$con =mysqli_connect("localhost","id435190_bvcecweb99999999","bvcecweb99999999");
+    mysqli_select_db($con,"id435190_info");
 	$cuname=$_POST['cuname'];
 	$cpwd=$_POST['cpwd'];
 	$nuname=$_POST['nuname'];
@@ -841,8 +841,8 @@ function admin_update()
 
 function details_update()
 {
-	$con =mysqli_connect("localhost","root","");
-	mysqli_select_db($con,"info");
+	$con =mysqli_connect("localhost","id435190_bvcecweb99999999","bvcecweb99999999");
+	mysqli_select_db($con,"id435190_info");
     $roll_no=$_POST['roll_no'];
     $name=$_POST['name'];
     $dob = $_POST['dob'];
@@ -922,8 +922,8 @@ function details_update()
 
 function stu_table_criteria()
 {
-    $con =mysqli_connect("localhost","root","");
-    mysqli_select_db($con,"info");
+    $con =mysqli_connect("localhost","id435190_bvcecweb99999999","bvcecweb99999999");
+    mysqli_select_db($con,"id435190_info");
     $flag=0;
 	$field_1=$_POST['field_1'];
     $result = mysqli_query($con,"SELECT * FROM profiles");
@@ -958,9 +958,9 @@ function upload()
     $target_dir = "uploads/";
     $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
     $uploadOk = 1;
-    $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
+    $imageFileType = pathid435190_info($target_file,PATHINFO_EXTENSION);
     $regdno = basename($_FILES["fileToUpload"]["name"]);
-    $con =mysql_connect("localhost","root","");
+    $con =mysql_connect("localhost","id435190_bvcecweb99999999","bvcecweb99999999");
     $img = "image";
     mysql_select_db($img,$con);
 
@@ -1018,15 +1018,15 @@ function upload()
 
 function emailSend()
 {
-	$con = mysql_connect("localhost","root","");
-	mysql_select_db("info") or die(mysql_error());
+	$con = mysql_connect("localhost","id435190_bvcecweb99999999","bvcecweb99999999");
+	mysql_select_db("id435190_info") or die(mysql_error());
 	if(isset($_POST["submit"]))
 	{
 		$subject = $_POST['subject'];
 		$message = $_POST['message'];
 		$emailRegd = $_POST['emailRegd'];
 		$from = "FROM: bvcec@org for all";    // Additional details here if needed ...
-		// $selectQuery = "Select email FROM info WHERE roll_no = $emailRegd";
+		// $selectQuery = "Select email FROM id435190_info WHERE roll_no = $emailRegd";
 		// mail($selectQuery,$subject,$message,$from) or die("There 1".mysql_error());
 		mail($emailRegd,$subject,$message,$from) or die("Here 2".mysql_error());
 	}
@@ -1039,8 +1039,8 @@ function emailSend()
 
 function backlog()
 {
-        $con =mysqli_connect("localhost","root","");
-        mysqli_select_db($con,"info");
+        $con =mysqli_connect("localhost","id435190_bvcecweb99999999","bvcecweb99999999");
+        mysqli_select_db($con,"id435190_info");
         $flag=0;
         $result = mysqli_query($con,"SELECT * FROM backlog ORDER BY roll_no");
 	if (isset($_POST['submit']))

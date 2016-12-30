@@ -44,8 +44,8 @@ function st_table()
 {
 
 echo "<br><h1>TECHNECIAL STAFF</h1>";
-        $con =mysqli_connect("localhost","root","");
-        mysqli_select_db($con,"info");
+        $con =mysqli_connect("localhost","id435190_bvcecweb99999999","bvcecweb99999999");
+        mysqli_select_db($con,"id435190_info");
         $flag=0;
         $result = mysqli_query($con,"SELECT * FROM st");
         echo "<table id = 'cust' align = 'center' border = '1' cellspacing = '0' cellpadding = '0' width = '70'>
@@ -67,8 +67,8 @@ echo "<br><h1>TECHNECIAL STAFF</h1>";
 
 echo "<br><br><br><br> NON-TECHNECIAL STAFF";
 
-        $con =mysqli_connect("localhost","root","");
-        mysqli_select_db($con,"info");
+        $con =mysqli_connect("localhost","id435190_bvcecweb99999999","bvcecweb99999999");
+        mysqli_select_db($con,"id435190_info");
         $flag=0;
         $result = mysqli_query($con,"SELECT * FROM nonst");
         echo "<table id = 'cust' align = 'center' border = '1' cellspacing = '0' cellpadding = '0' width = '700'>
@@ -90,8 +90,8 @@ echo "<br><br><br><br> NON-TECHNECIAL STAFF";
 
 function details_admin()
 {
-    $con =mysqli_connect("localhost","root","");
-    mysqli_select_db($con,"info");
+    $con =mysqli_connect("localhost","id435190_bvcecweb99999999","bvcecweb99999999");
+    mysqli_select_db($con,"id435190_info");
     $flag=0;
     $no=$_REQUEST['no'];
     $result = mysqli_query($con,"SELECT * FROM st");
@@ -152,8 +152,8 @@ function details_admin()
 
 function nondetails_admin()
 {
-    $con =mysqli_connect("localhost","root","");
-    mysqli_select_db($con,"info");
+    $con =mysqli_connect("localhost","id435190_bvcecweb99999999","bvcecweb99999999");
+    mysqli_select_db($con,"id435190_info");
     $flag=0;
     $no=$_REQUEST['no'];
     $result = mysqli_query($con,"SELECT * FROM nonst");

@@ -159,13 +159,13 @@ float: left;
                             map: map,
                             position: new google.maps.LatLng(16.46982694408489, 81.93206051503896)
                         });
-                        infowindow = new google.maps.InfoWindow({
+                        id435190_infowindow = new google.maps.InfoWindow({
                             content: '<strong>BVC</strong><br>Odalarevu<br>'
                         });
                         google.maps.event.addListener(marker, 'click', function() {
-                            infowindow.open(map, marker);
+                            id435190_infowindow.open(map, marker);
                         });
-                        infowindow.open(map, marker);
+                        id435190_infowindow.open(map, marker);
                     }
                     google.maps.event.addDomListener(window, 'load', init_map);
 

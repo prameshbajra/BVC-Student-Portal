@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <title>
-        Student details information.
+        Student details id435190_information.
     </title>
     <link rel="stylesheet" href="styleadmin.css">
     <link rel="stylesheet" href="animate.css">
