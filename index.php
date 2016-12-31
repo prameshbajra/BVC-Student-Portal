@@ -13,23 +13,6 @@
     <link rel="stylesheet" href="styleIndex.css">
     <script type="text/javascript" src="date_time.js"></script>
 </head>
-<!--Live chat starts here (Admin And User)...
-
-<script type="text/javascript">
-    var Tawk_API = Tawk_API || {},
-        Tawk_LoadStart = new Date();
-    (function() {
-        var s1 = document.createElement("script"),
-            s0 = document.getElementsByTagName("script")[0];
-        s1.async = true;
-        s1.src = 'https://embed.tawk.to/582edeaa7bb7bf7f5218b02a/default';
-        s1.charset = 'UTF-8';
-        s1.setAttribute('crossorigin', '*');
-        s0.parentNode.insertBefore(s1, s0);
-    })();
-</script>
-
--->
 
 <body>
     <div class="topDiv">
@@ -168,34 +151,22 @@
                             <img src="bvc_gurukul-756x250.jpg" style="width:202%;height:400px;border-bottom:10px double black;">
 
                         </div>
-
-                        <div class="mySlides fade" style="width:100%;height:350px;">
-
-                            <img src="af206dd800ed91ddb218932ded2b02e3coverBVCITS.jpg" style="width:202%;height:400px;border-bottom:10px double black;">
-
-                        </div>
-
-                        <div class="mySlides fade">
-                            <img src="4596970e54c7df92f2dfc2293cfcffb2.jpg" style="width:202%;height:400px;border-bottom:10px double black;">
-
-
-
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div id="bottom_part" style="border:3px solid gray;margin:80px 0 0 990px;width:25%;height:300px;">
-            <p class="newFooter">
-                <h2 align="center">
-                    <u style="color: black;">Flash News</u>
-                </h2>
-                <marquee behavior="scroll" scrollamount="5" direction="left" onmouseover="this.stop();" onmouseout="this.start();">
+    </div>
+    <div id="bottom_part" style="border:3px solid gray;margin:80px 0 0 990px;width:25%;height:500px;">
+        <p class="newFooter">
+            <h2 align="center">
+                <u style="color: blue">Flash News</u>
+            </h2>
+            <marquee behavior="scroll" scrollamount="5" direction="left" onmouseover="this.stop();" onmouseout="this.start();">
 
-                    <?php
+                <?php
                             $servername = "localhost";
                             $username = "id435190_bvcecweb99999999";
-                            $password = "";
+                            $password = "bvcecweb99999999";
                             $dbname = "id435190_info";
 
                             // Create connection
@@ -224,216 +195,22 @@
                             $conn->close();
                         ?>
 
-                </marquee><br>
-                <br>
-            </p>
-        </div>
+            </marquee><br>
+            <br>
+        </p>
+    </div>
     </div>
     </br>
     </br>
     </br>
 
-    <script>
-        var myIndex = 0;
-        carousel();
-
-        function carousel() {
-            var i;
-            var x = document.getElementsByClassName("mySlides");
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";
-            }
-            myIndex++;
-            if (myIndex > x.length) {
-                myIndex = 1
-            }
-            x[myIndex - 1].style.display = "block";
-            setTimeout(carousel, 4000);
-        }
-
-    </script>
+    <footer id="footer">
+        <h4 id="left">Copyright &copy;</h4>
+        <h4 id="right">BVCEC</h4>
+    </footer>
 </body>
-<footer id="footer">
-    <h4 id="left">Copyright &copy;</h4>
-    <h4 id="right">BVCEC</h4>
-</footer>
-
-
-<!DOCTYPE html>
-
-
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-    * {
-        box-sizing: border-box
-    }
-    
-    body {
-        font-family: Verdana, sans-serif;
-    }
-    /* Slideshow container */
-    
-    .slideshow-container {
-        max-width: 1000px;
-        position: relative;
-        margin: auto;
-    }
-    /* Caption text */
-    
-    .text {
-        color: #f2f2f2;
-        font-size: 15px;
-        padding: 8px 12px;
-        position: absolute;
-        bottom: 8px;
-        width: 1000%;
-        text-align: center;
-    }
-    /* Number text (1/3 etc) */
-    
-    .numbertext {
-        color: #f2f2f2;
-        font-size: 12px;
-        padding: 8px 12px;
-        position: absolute;
-        top: 0;
-    }
-    /* The dots/bullets/indicators */
-    
-    .dot {
-        height: 13px;
-        width: 13px;
-        margin: 0 2px;
-        background-color: #bbb;
-        border-radius: 50%;
-        display: inline-block;
-        transition: background-color 0.6s ease;
-    }
-    
-    .active {
-        background-color: #717171;
-    }
-    /* Fading animation */
-    
-    .fade {
-        -webkit-animation-name: fade;
-        -webkit-animation-duration: 1.5s;
-        animation-name: fade;
-        animation-duration: 1.5s;
-    }
-    
-    @-webkit-keyframes fade {
-        from {
-            opacity: .4
-        }
-        to {
-            opacity: 1
-        }
-    }
-    
-    @keyframes fade {
-        from {
-            opacity: .4
-        }
-        to {
-            opacity: 1
-        }
-    }
-    /* On smaller screens, decrease text size */
-    
-    @media only screen and (max-width: 1000px) {
-        .text {
-            font-size: 11px
-        }
-    }
-
-</style>
 
 
 
-
-<html>
-<title>Welcome To BVCEC</title>
-
-<head>
-    <style>
-        body {
-            background-color: white;
-        }
-
-    </style>
-
-
-    <style>
-        .button {
-            border-top: 1px solid #96d1f8;
-            background: #2f434f;
-            background: -webkit-gradient(linear, left top, left bottom, from(blue), to(#2f434f));
-            background: -webkit-linear-gradient(top, blue, #2f434f);
-            background: -moz-linear-gradient(top, blue, #2f434f);
-            background: -ms-linear-gradient(top, blue, #2f434f);
-            background: -o-linear-gradient(top, blue, #2f434f);
-            padding: 16.5px 33px;
-            -webkit-border-radius: 13px;
-            -moz-border-radius: 13px;
-            border-radius: 13px;
-            -webkit-box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
-            -moz-box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
-            box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
-            text-shadow: rgba(0, 0, 0, .4) 0 1px 0;
-            color: white;
-            font-size: 18px;
-            font-family: Georgia, Serif;
-            text-decoration: none;
-            vertical-align: middle;
-        }
-        
-        .button:hover {
-            border-top-color: #2980b9;
-            background: #2980b9;
-            color: white;
-        }
-        
-        .button:active {
-            border-top-color: #8f9aa1;
-            background: white;
-        }
-
-    </style>
-
-
-
-
-</head>
-
-<body>
-    <script>
-        var slideIndex = 0;
-        showSlides();
-
-        function showSlides() {
-            var i;
-            var slides = document.getElementsByClassName("mySlides");
-            var dots = document.getElementsByClassName("dot");
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            slideIndex++;
-            if (slideIndex > slides.length) {
-                slideIndex = 1
-            }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "bvcecweb99999999");
-            }
-            slides[slideIndex - 1].style.display = "block";
-            dots[slideIndex - 1].className += " active";
-            setTimeout(showSlides, 2000); // Change image every 2 seconds
-        }
-
-    </script>
-
-</html>
-
-</body>
 
 </html>

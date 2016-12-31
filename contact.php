@@ -54,24 +54,24 @@
         </li>
         <li><a href="stlo.php">Students</a></li>
 
-            <li><a href="#"> Departments</a>
-                <ul class="submenu1">
-                    <li><a href="Department.php">CSE</a></li>
+        <li><a href="#"> Departments</a>
+            <ul class="submenu1">
+                <li><a href="Department.php">CSE</a></li>
 
-                    <li><a href="civil.php">CE</a></li>
-                    <li><a href="mech.php">ME</a></li>
-                    <li><a href="eee.php">EEE</a></li>
-                    <li><a href="ece.php">ECE</a></li>
-                </ul>
-            </li>
-            <li><a href="#">Accredition</a>
-                <ul class="submenu1">
-                    <li><a href="naac.php">NAAC</a></li>
-                    <li><a href="nba.php">NBA</a></li>
-                    <li><a href="pio.php">PIO</a></li>
-                </ul>
-            </li>
-            <li><a href="help.php">Help</a></li>
+                <li><a href="civil.php">CE</a></li>
+                <li><a href="mech.php">ME</a></li>
+                <li><a href="eee.php">EEE</a></li>
+                <li><a href="ece.php">ECE</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Accredition</a>
+            <ul class="submenu1">
+                <li><a href="naac.php">NAAC</a></li>
+                <li><a href="nba.php">NBA</a></li>
+                <li><a href="pio.php">PIO</a></li>
+            </ul>
+        </li>
+        <li><a href="help.php">Help</a></li>
 
     </ul>
     <div class="bodyDiv">
@@ -110,7 +110,7 @@
                 <h4>
                     <p> BVC Engineering College ,Odalarevu<br>Mandal: Allavaram<br>East Godavari District<br>City: Amalapuram<br>Andhra Pradesh<br>Pin no: 533210<br></h4>
                 <h4>Website : www.bvcec.org</h4>
-                <h4>E-mail Id : id435190_info.bvce@bvcgroup.in</h4>
+                <h4>E-mail Id : info.bvce@bvcgroup.in</h4>
                 <h4>Contact Number : +91-9440121621</h4>
             </article>
             <aside class="map" style="float:right; margin-left:10%;">
@@ -138,13 +138,13 @@
                             map: map,
                             position: new google.maps.LatLng(21.331654257466333, 89.53758715000002)
                         });
-                        id435190_infowindow = new google.maps.InfoWindow({
+                        infowindow = new google.maps.InfoWindow({
                             content: '<strong>BVC</strong><br>Odalarevu<br>'
                         });
                         google.maps.event.addListener(marker, 'click', function() {
-                            id435190_infowindow.open(map, marker);
+                            infowindow.open(map, marker);
                         });
-                        id435190_infowindow.open(map, marker);
+                        infowindow.open(map, marker);
                     }
                     google.maps.event.addDomListener(window, 'load', init_map);
 
